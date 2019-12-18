@@ -1,3 +1,9 @@
+<template>
+  <div>
+    {{ blogPosts }}
+  </div>
+</template>
+
 <script>
 export default {
   computed: {
@@ -7,3 +13,4 @@ export default {
   }
 }
 </script>
+

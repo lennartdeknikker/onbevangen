@@ -8,10 +8,6 @@
       <h2 class="subtitle">
         Onbevangen - het project
       </h2>
-      <article>
-        <h1>{{ blogPost.title }}</h1>
-        <div>{{ blogPost.body }}</div>
-      </article>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
           Documentation
@@ -41,18 +37,6 @@ export default {
   },
   components: {
     Logo
-  },
-  computed: {
-    blogPosts() {
-      return this.$store.state.blogPosts
-    }
-  },
-  async asyncData({ params, payload }) {
-    if (payload) return { blogPost: payload }
-    else
-      return {
-        blogPost: await require(`~/assets/content/blog/${params.blog}.json`)
-      }
   }
 }
 </script>
