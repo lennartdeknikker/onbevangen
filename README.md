@@ -1,4 +1,5 @@
 # onbevangen
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c8471034-6d57-4cfc-8d39-921e7e0b6872/deploy-status)](https://app.netlify.com/sites/boring-mcclintock-b32e28/deploys)
 
 > Onbevangen - het project
 
