@@ -31,13 +31,17 @@ collections:
     identifier_field: full_name
     fields:
       - { label: 'Naam', name: 'full_name', widget: 'string' }
+      - { label: 'Naam (Engels)', name: 'full_name_en', widget: 'string', required: false }
       - { label: 'Beroep', name: 'profession', widget: 'string' }
+      - { label: 'Beroep (Engels)', name: 'profession_en', widget: 'string', required: false  }
       - { label: 'Functie', name: 'function', widget: 'string' }
+      - { label: 'Functie (Engels)', name: 'function_en', widget: 'string', required: false  }
       - {
           label: 'Uitspraken',
           name: 'quotes',
           widget: 'list',
           allow_add: true,
-          field: { label: 'Quote', name: 'quote', widget: string },
+          fields: { - { label: 'Quote', name: 'quote', widget: string }
+                    - { label: 'Quote (Engels)', name: 'quote_en', widget: string , required: false } },
         }
       - { label: 'Uitgelichte foto', name: 'image', widget: 'image' }
