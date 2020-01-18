@@ -56,13 +56,6 @@ collections:
           name: 'quotes',
           widget: 'list',
           allow_add: true,
-          fields: { label: 'Quote', name: 'quote', widget: string },
-          {
-            label: 'Quote -EN-',
-            name: 'quote_en',
-            widget: string,
-            required: false,
-          },
           fields:
         - {label: 'Quote', name: 'quote', widget: string}
         - {label: 'Quote -EN-', name: quote_en, widget: string, required: false}
