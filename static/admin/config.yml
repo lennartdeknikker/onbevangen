@@ -32,21 +32,21 @@ collections:
     fields:
       - { label: 'Naam', name: 'full_name', widget: 'string' }
       - {
-          label: 'Naam (Engels)',
+          label: 'Naam -EN-',
           name: 'full_name_en',
           widget: 'string',
           required: false,
         }
       - { label: 'Beroep', name: 'profession', widget: 'string' }
       - {
-          label: 'Beroep (Engels)',
+          label: 'Beroep -EN-',
           name: 'profession_en',
           widget: 'string',
           required: false,
         }
       - { label: 'Functie', name: 'function', widget: 'string' }
       - {
-          label: 'Functie (Engels)',
+          label: 'Functie -EN-',
           name: 'function_en',
           widget: 'string',
           required: false,
@@ -58,10 +58,13 @@ collections:
           allow_add: true,
           fields: { label: 'Quote', name: 'quote', widget: string },
           {
-            label: 'Quote (Engels)',
+            label: 'Quote -EN-',
             name: 'quote_en',
             widget: string,
             required: false,
           },
+          fields:
+        - {label: 'Quote', name: 'quote', widget: string}
+        - {label: 'Quote -EN-', name: quote_en, widget: string, required: false}
         }
       - { label: 'Uitgelichte foto', name: 'image', widget: 'image' }
