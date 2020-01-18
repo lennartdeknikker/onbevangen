@@ -9,7 +9,7 @@ collections:
   - name: 'vrouw'
     label: 'Vrouw'
     format: 'json'
-    folder: 'assets/content/vrouwen'
+    folder: 'assets/content/women'
     create: true
     slug: '{{full_name}}'
     editor:
