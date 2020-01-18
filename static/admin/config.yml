@@ -33,5 +33,11 @@ collections:
       - { label: 'Naam', name: 'full_name', widget: 'string' }
       - { label: 'Beroep', name: 'profession', widget: 'string' }
       - { label: 'Functie', name: 'function', widget: 'string' }
-      - { label: 'Uitspraken', name: 'quotes', widget: 'list' }
+      - {
+          label: 'Uitspraken',
+          name: 'quotes',
+          widget: 'list',
+          allow_add: true,
+          field: { label: 'Quote', name: 'quote', widget: string },
+        }
       - { label: 'Uitgelichte foto', name: 'image', widget: 'image' }
