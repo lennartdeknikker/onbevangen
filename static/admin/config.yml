@@ -31,33 +31,23 @@ collections:
     identifier_field: full_name
     fields:
       - { label: 'Naam', name: 'full_name', widget: 'string' }
-      - {
-          label: 'Naam -EN-',
-          name: 'full_name_en',
-          widget: 'string',
-          required: false,
-        }
+      - { label: 'Naam -EN-', name: 'full_name_en', widget: 'string' }
       - { label: 'Beroep', name: 'profession', widget: 'string' }
-      - {
-          label: 'Beroep -EN-',
-          name: 'profession_en',
-          widget: 'string',
-          required: false,
-        }
+      - { label: 'Beroep -EN-', name: 'profession_en', widget: 'string' }
       - { label: 'Functie', name: 'function', widget: 'string' }
-      - {
-          label: 'Functie -EN-',
-          name: 'function_en',
-          widget: 'string',
-          required: false,
-        }
+      - { label: 'Functie -EN-', name: 'function', widget: 'string' }
       - {
           label: 'Uitspraken',
           name: 'quotes',
           widget: 'list',
           allow_add: true,
-          fields:
-        - {label: 'Quote', name: 'quote', widget: string}
-        - {label: 'Quote -EN-', name: quote_en, widget: string, required: false}
+          field: { label: 'Quote', name: 'quote', widget: string },
+        }
+      - {
+          label: 'Uitspraken -EN-',
+          name: 'quotes',
+          widget: 'list',
+          allow_add: true,
+          field: { label: 'Quote', name: 'quote_en', widget: string },
         }
       - { label: 'Uitgelichte foto', name: 'image', widget: 'image' }
