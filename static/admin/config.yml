@@ -25,7 +25,7 @@ collections:
     format: 'json'
     folder: 'assets/content/vrouwen'
     create: true
-    slug: '{{full_name}}-{{slug}}'
+    slug: '{{full_name}}'
     editor:
       preview: false
     identifier_field: full_name
