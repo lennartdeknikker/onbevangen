@@ -41,7 +41,8 @@ collections:
           name: 'quotes',
           widget: 'list',
           allow_add: true,
-          fields: { - { label: 'Quote', name: 'quote', widget: string }
-                    - { label: 'Quote (Engels)', name: 'quote_en', widget: string , required: false } },
+          fields: 
+            - { label: 'Quote', name: 'quote', widget: string }
+            - { label: 'Quote (Engels)', name: 'quote_en', widget: string , required: false }
         }
       - { label: 'Uitgelichte foto', name: 'image', widget: 'image' }
