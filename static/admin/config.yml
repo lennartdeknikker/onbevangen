@@ -10,8 +10,8 @@ collections:
     label: 'General configuration'
     format: 'json'
     folder: 'assets/content/general'
-    create: true;
-    delete: false;
+    create: true
+    delete: false
     slug: '{{slug}}'
     editor:
       preview: false
