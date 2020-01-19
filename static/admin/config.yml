@@ -6,6 +6,26 @@ media_folder: static/images/upload
 public_folder: /images/upload
 
 collections:
+  - name: 'general'
+    label: 'General configuration'
+    format: 'json'
+    folder: 'assets/content/general'
+    create: true;
+    delete: false;
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    identifier_field: name
+    fields:
+      - name: "social"
+          label: "Social Media Links"
+          widget: list          
+          allow_add: true
+          fields:
+            - {label: "Name", name: "name", widget: "string"}
+            - {label: "Link Address", name: "link", widget: "string"}
+            - {label: "FontAwesome icon class", name: "FAIconClass", widget: "string"}
+
   - name: 'vrouw'
     label: 'Vrouw'
     format: 'json'
