@@ -6,7 +6,7 @@
 export default {
   props: {
     woman: {
-      type: Array,
+      type: Object,
       required: true
     }
   },
@@ -21,6 +21,6 @@ export default {
 <style scoped>
 .gallery-item {
   height: 100%;
-  width: 33%;
+  width: 33.33%;
 }
 </style>
