@@ -4,6 +4,21 @@
       "name": "Twitter",
       "link": "https://twitter.com/OnbevangenP",
       "FAIconClass": "fab fa-twitter-square"
+    },
+    {
+      "name": "Facebook",
+      "link": "https://www.facebook.com/OnbevangenHetProject/",
+      "FAIconClass": "fab fa-facebook-square"
+    },
+    {
+      "name": "Instagram",
+      "link": "https://www.instagram.com/onbevangenhetproject",
+      "FAIconClass": "fab fa-instagram"
+    },
+    {
+      "name": "linkedIn",
+      "link": "https://www.linkedin.com/company/onbevangen-het-project",
+      "FAIconClass": "fab fa-linkedin"
     }
   ]
 }
