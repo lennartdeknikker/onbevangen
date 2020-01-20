@@ -26,9 +26,9 @@
     </button>
     <GalleryItem
       v-for="(woman, index) of women"
-      :key="woman.full_name + '_image_container'"
+      :key="woman.first_name + '_image_container'"
       :woman="woman"
-      :data-person="woman.full_name"
+      :data-person="woman.first_name"
       :photoIndex="index"
       :photosToShow="photosToShow"
     >
