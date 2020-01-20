@@ -1,6 +1,6 @@
 <template>
   <ul class="social-buttons">
-    <li v-for="link in socialLinks" :key="link.name" class="social-button">
+    <li v-for="link in social" :key="link.name" class="social-button">
       <a :href="link.link">
         <i :class="link.FAIconClass"></i>
       </a>
@@ -10,30 +10,9 @@
 
 <script>
 export default {
-  data() {
-    return {
-      socialLinks: {
-        twitter: {
-          name: 'twitter',
-          link: 'https://twitter.com/OnbevangenP',
-          FAIconClass: 'fab fa-twitter-square'
-        },
-        facebook: {
-          name: 'facebook',
-          link: 'https://www.facebook.com/OnbevangenHetProject/',
-          FAIconClass: 'fab fa-facebook-square'
-        },
-        instagram: {
-          name: 'instagram',
-          link: 'https://www.instagram.com/onbevangenhetproject',
-          FAIconClass: 'fab fa-instagram'
-        },
-        linkedin: {
-          name: 'linkedin',
-          link: 'https://www.linkedin.com/company/onbevangen-het-project',
-          FAIconClass: 'fab fa-linkedin'
-        }
-      }
+  computed: {
+    social() {
+      return this.$store.state.social[0].social
     }
   }
 }
