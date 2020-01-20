@@ -10,12 +10,12 @@ collections:
     label: 'General configuration'
     format: 'json'
     folder: 'assets/content/general'
-    create: true;
-    delete: false;
+    create: true
+    delete: false
     slug: '{{slug}}'
     editor:
       preview: false
-    identifier_field: name
+    identifier_field: social
     fields:
       - name: 'social'
         label: 'Social Media Links'
