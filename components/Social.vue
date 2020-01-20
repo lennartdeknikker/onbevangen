@@ -28,6 +28,11 @@ a {
 
 .social-button {
   margin-left: 1.3rem;
+  transition: transform 0.5s ease;
+}
+
+.social-button:hover {
+  transform: scale(1.2);
 }
 
 .social-buttons {

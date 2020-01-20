@@ -26,6 +26,7 @@ export default {
   width: 100%;
   justify-content: space-between;
   height: 10em;
+  z-index: 3;
 }
 .title {
   height: 4em;

@@ -40,6 +40,7 @@ export default {
 <style>
 :root {
   --font: 'PT Sans Narrow', sans-serif;
+  --grey: rgb(94, 94, 94);
 }
 
 .container {

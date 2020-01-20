@@ -35,12 +35,13 @@ collections:
     format: 'json'
     folder: 'assets/content/women'
     create: true
-    slug: '{{full_name}}'
+    slug: '{{first_name}}+{{last_name}}'
     editor:
       preview: false
     identifier_field: full_name
     fields:
-      - { label: 'Naam', name: 'full_name', widget: 'string' }
+      - { label: 'Voornaam', name: 'first_name', widget: 'string' }
+      - { label: 'Achternaam', name: 'last_name', widget: 'string' }
       - { label: 'Beroep', name: 'profession', widget: 'string' }
       - {
           label: 'Beroep (EN)',

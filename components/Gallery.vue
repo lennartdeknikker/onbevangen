@@ -1,6 +1,9 @@
 <template>
   <div class="gallery-container">
-    <button @click="imageIndex -= 1" class="slide-button-left slide-button">
+    <button
+      @click="updatePhotosToShow('left')"
+      class="slide-button-left slide-button"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 110.18 252.62"
@@ -22,13 +25,18 @@
       </svg>
     </button>
     <GalleryItem
-      v-for="woman of women"
+      v-for="(woman, index) of women"
       :key="woman.full_name + '_image_container'"
       :woman="woman"
       :data-person="woman.full_name"
+      :photoIndex="index"
+      :photosToShow="photosToShow"
     >
     </GalleryItem>
-    <button @click="imageIndex += 1" class="slide-button-right slide-button">
+    <button
+      @click="updatePhotosToShow('right')"
+      class="slide-button-right slide-button"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 110.18 252.62"
@@ -61,12 +69,27 @@ export default {
   },
   data() {
     return {
-      imageIndex: 0
+      photosToShow: [1, 2, 3]
     }
   },
   computed: {
     women() {
       return this.$store.state.women
+    }
+  },
+  methods: {
+    updatePhotosToShow(direction) {
+      if (direction === 'left' && this.photosToShow[0] > 0) {
+        this.photosToShow = this.photosToShow.map((x) => x - 1)
+      }
+
+      if (
+        direction === 'right' &&
+        this.photosToShow[this.photosToShow.length - 1] <
+          this.$store.state.women.length - 1
+      ) {
+        this.photosToShow = this.photosToShow.map((x) => x + 1)
+      }
     }
   }
 }
@@ -77,8 +100,8 @@ export default {
   width: 100%;
   height: 100vh;
   display: flex;
-  overflow: hidden;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .slide-button {
@@ -95,6 +118,7 @@ export default {
   font-size: 3em;
   overflow: hidden;
   cursor: pointer;
+  z-index: 3;
 }
 
 .slide-button:active {
