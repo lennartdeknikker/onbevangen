@@ -1,5 +1,8 @@
 export default {
-  getLogoSvgCode(state) {
+  getWomen(state) {
     return state.women
+  },
+  getSocial(state) {
+    return state.social
   }
 }
