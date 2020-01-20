@@ -17,7 +17,24 @@
               {{ woman.last_name }}
             </span>
           </h2>
-          <button class="button-more-info">+</button>
+          <button class="button-more-info">
+            <svg viewBox="0 0 253 253" class="plus-svg">
+              <defs>
+                <style>
+                  .a {
+                    fill: none;
+                    stroke: white;
+                    stroke-linecap: round;
+                    stroke-miterlimit: 10;
+                    stroke-width: 8px;
+                  }
+                </style>
+              </defs>
+              <title>icons</title>
+              <line class="a" x1="126.5" y1="4" x2="126.5" y2="249" />
+              <line class="a" x1="4" y1="126.5" x2="249" y2="126.5" />
+            </svg>
+          </button>
           <div class="info-wrapper">
             <h3 class="profession">{{ woman.profession }}</h3>
             <p class="function">{{ woman.function }}</p>
@@ -46,7 +63,7 @@ export default {
   },
   data() {
     return {
-      show: true
+      show: false
     }
   },
   computed: {
@@ -58,14 +75,11 @@ export default {
 </script>
 
 <style scoped>
-.slide-enter-active,
-.slide-leave-active {
+.slide-enter-active {
   transition: opacity 1.5s;
-  z-index: -1;
 }
 
-.slide-enter,
-.slide-leave-to {
+.slide-enter {
   opacity: 0;
 }
 
@@ -74,10 +88,24 @@ export default {
   width: 33.33%;
 }
 
+@media (max-width: 1350px) {
+  .gallery-item {
+    height: 100%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 880px) {
+  .gallery-item {
+    height: 100%;
+    width: 100%;
+  }
+}
+
 /* content card styling */
 .content {
   height: 100%;
-  width: 100%;
+  width: calc(100%-10em);
   background-color: black;
   color: white;
   display: flex;
@@ -90,7 +118,6 @@ export default {
 .trans-content-enter-active,
 .trans-content-leave-active {
   transition: opacity 0.3s;
-  z-index: -1;
 }
 
 .trans-content-enter,
@@ -104,6 +131,7 @@ export default {
   background: none;
   color: white;
   font-size: 10rem;
+  width: 8rem;
 }
 
 .name {
@@ -112,7 +140,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 10rem;
+  width: 13rem;
 }
 
 .first-name {
@@ -121,7 +149,7 @@ export default {
 }
 
 .info-wrapper {
-  width: 7rem;
+  width: 10rem;
   margin-right: 3rem;
   height: 8rem;
 }
@@ -134,5 +162,6 @@ export default {
 .function {
   font-family: var(--font);
   color: var(--grey);
+  width: 10rem;
 }
 </style>

@@ -41,4 +41,12 @@ a {
   list-style-type: none;
   margin-left: 1rem;
 }
+
+@media (max-width: 800px) {
+  .social-button,
+  .social-buttons {
+    margin: 0 1rem 0 0;
+    font-size: 1rem;
+  }
+}
 </style>

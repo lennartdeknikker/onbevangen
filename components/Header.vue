@@ -25,15 +25,19 @@ export default {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  height: 10em;
-  z-index: 3;
+  z-index: 4;
 }
 .title {
-  height: 4em;
   font-family: var(--font);
   color: white;
   font-size: 3.5em;
   font-weight: normal;
   margin: 1.5rem 2rem;
+}
+
+@media (max-width: 800px) {
+  .title {
+    font-size: 2.5rem;
+  }
 }
 </style>

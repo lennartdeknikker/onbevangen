@@ -128,13 +128,15 @@ export default {
 
 .slide-button-left {
   left: 0;
+  padding: 0 0 0 2rem;
 }
 
 .slide-button-right {
   right: 0;
+  padding: 0 2rem 0 0;
 }
 
 .arrow-svg {
-  width: 0.8em;
+  width: 1.5rem;
 }
 </style>
