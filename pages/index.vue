@@ -51,18 +51,4 @@ export default {
   margin: 0 auto;
   min-height: 100vh;
 }
-
-@media (min-width: 700px) {
-  .gallery-item {
-    height: 100%;
-    width: 50%;
-  }
-}
-
-@media (min-width: 1350px) {
-  .gallery-item {
-    height: 100%;
-    width: 33.33%;
-  }
-}
 </style>
