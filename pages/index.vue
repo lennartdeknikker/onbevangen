@@ -51,4 +51,8 @@ export default {
   margin: 0 auto;
   min-height: 100vh;
 }
+
+button {
+  outline: none;
+}
 </style>

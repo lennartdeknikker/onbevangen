@@ -97,7 +97,7 @@ export default {
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 6rem 2.5rem 5rem 2.5rem;
+  padding: 8rem 2.5rem 5rem 2.5rem;
 }
 
 .trans-content-enter-active,
@@ -155,6 +155,7 @@ export default {
   .gallery-item {
     height: 100%;
     width: 50%;
+    border: 10px solid red;
   }
 }
 
@@ -162,6 +163,7 @@ export default {
   .gallery-item {
     height: 100%;
     width: 33.33%;
+    border: 10px solid red;
   }
 }
 </style>
