@@ -1,10 +1,10 @@
 <template>
   <div class="detail-container">
     <img :src="woman.image" class="photo" alt="" />
+    <h2 class="full-name">
+      {{ `${woman.first_name} ${woman.last_name}` }}
+    </h2>
     <div class="quotes-text-wrapper">
-      <h2 class="full-name">
-        {{ `${woman.first_name} ${woman.last_name}` }}
-      </h2>
       <ul class="quotes">
         <li v-for="quote of woman.quotes" :key="quote" class="quote">
           {{ quote }}
@@ -33,24 +33,29 @@ export default {
 .detail-container {
   padding: 10rem 2.5rem;
   color: white;
-  display: flex;
   font-family: var(--font);
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-areas: 'photo fullname about' 'photo quotes about';
+  grid-template-columns: 3fr 5fr 1fr;
+  grid-template-rows: 2.5rem 1fr;
 }
 
 .photo {
-  width: 25%;
+  width: 100%;
+  grid-area: photo;
+  min-width: 12rem;
 }
 
 .quotes-text-wrapper {
-  width: 50%;
   margin: 0 2.5rem;
+  grid-area: quotes;
+  min-width: 15rem;
 }
 
 .about-text-wrapper {
   display: flex;
   flex-direction: column;
+  grid-area: about;
 }
 
 .profession {
@@ -65,6 +70,8 @@ export default {
 .full-name {
   font-size: 2rem;
   font-weight: normal;
+  grid-area: fullname;
+  margin-left: 2.5rem;
 }
 
 .quotes {
@@ -78,12 +85,39 @@ export default {
   font-size: 1.3em;
 }
 
-@media (max-width: 700px) {
-  .photo {
-    width: 100%;
+@media (max-width: 1350px) {
+  .detail-container {
+    grid-template-areas:
+      'photo fullname'
+      'photo about'
+      'photo quotes';
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: 4rem 5rem 1fr;
+  }
+  .about-text-wrapper {
+    margin-left: 2.5rem;
+    margin-bottom: 2rem;
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 700px) {
+  .detail-container {
+    grid-template-areas:
+      'photo'
+      'fullname'
+      'about'
+      'quotes';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .about-text-wrapper,
+  .full-name {
+    padding-top: 2rem;
+  }
+
+  .quote {
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
 }
 </style>
