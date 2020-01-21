@@ -40,7 +40,8 @@
                 <input
                   id="mce-EMAIL"
                   type="email"
-                  value="E-mailadres"
+                  value=""
+                  placeholder="E-mailadres"
                   name="EMAIL"
                   class="required email email-input"
                 />
