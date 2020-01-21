@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
 .detail-container {
-  padding: 10rem 2.5rem;
+  padding: 1rem 2.5rem;
   color: white;
   font-family: var(--font);
   display: grid;
