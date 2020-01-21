@@ -50,5 +50,6 @@ export default {
 
 button:focus {
   outline: none;
+  background: transparent;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Header />
-    <Detail :woman="vrouw" />
+    <Detail :woman="detail" />
   </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
     if (payload) return { detail: payload }
     else
       return {
-        vrouw: await require(`~/assets/content/women/${params.detail}.json`)
+        detail: await require(`~/assets/content/women/${params.detail}.json`)
       }
   },
   head() {
@@ -57,6 +57,7 @@ export default {
 
 button:focus {
   outline: none;
+  background: transparent;
 }
 
 .json {
