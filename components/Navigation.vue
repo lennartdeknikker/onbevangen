@@ -1,11 +1,13 @@
 <template>
   <nav class="nav-container">
     <ul class="full-menu">
-      <li class="nav-item"><a href="/nieuws">nieuws</a></li>
-      <li class="nav-item"><a href="/nieuws">informatie</a></li>
+      <li class="nav-item"><a class="link" href="/nieuws">Nieuws</a></li>
+      <li class="nav-item">
+        <a class="link" href="/informatie">Informatie</a>
+      </li>
       <li><Social /></li>
       <li class="nav-item">
-        <a href="/nieuws"
+        <a class="link" href="/nieuws"
           ><span class="language-indicator-not-selected">EN</span>/<span
             >NL</span
           ></a
@@ -17,14 +19,16 @@
         <i class="fas fa-bars"></i>
       </button>
       <ul v-if="showMobileMenu" class="mobile-menu">
-        <li class="nav-item"><a href="/nieuws">Foto's</a></li>
-        <li class="nav-item"><a href="/nieuws">Informatie</a></li>
+        <li class="nav-item"><a class="link" href="/">Foto's</a></li>
         <li class="nav-item">
-          <a href="/nieuws">Nieuws</a>
+          <a class="link" href="/informatie">Informatie</a>
+        </li>
+        <li class="nav-item">
+          <a class="link" href="/nieuws">Nieuws</a>
         </li>
         <li class="nav-item"><Social /></li>
         <li class="nav-item">
-          <a href="/nieuws" class="language-indicators"
+          <a href="/nieuws" class="language-indicators link"
             ><span class="language-indicator-not-selected">EN</span>/<span
               >NL</span
             ></a
@@ -66,7 +70,7 @@ export default {
   margin-right: 2rem;
 }
 
-a {
+.link {
   color: white;
   font-family: var(--font);
   text-decoration: none;

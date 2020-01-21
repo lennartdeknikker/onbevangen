@@ -1,6 +1,8 @@
 <template>
   <div class="header-container">
-    <h1 class="title">{{ title.toUpperCase() }}</h1>
+    <a href="/"
+      ><h1 class="title">{{ title.toUpperCase() }}</h1></a
+    >
     <Navigation />
   </div>
 </template>
