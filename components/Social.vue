@@ -42,7 +42,7 @@ a {
   margin-left: 1rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 780px) {
   .social-button,
   .social-buttons {
     margin: 0 1rem 0 0;

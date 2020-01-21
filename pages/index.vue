@@ -22,6 +22,9 @@ export default {
           href:
             'https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap'
         }
+      ],
+      meta: [
+        { name: 'viewport', content: 'width=device-width,initial-scale=1.0' }
       ]
     }
   },

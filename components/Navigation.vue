@@ -92,7 +92,7 @@ a {
   color: #b3b3b3;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 780px) {
   .toggle-menu {
     display: flex;
     position: fixed;

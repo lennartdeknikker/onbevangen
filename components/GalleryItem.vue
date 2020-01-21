@@ -94,7 +94,7 @@ export default {
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 700px) {
   .gallery-item {
     height: 100%;
     width: 100%;
