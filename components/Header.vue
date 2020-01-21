@@ -19,7 +19,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .header-container {
   position: fixed;
   display: flex;

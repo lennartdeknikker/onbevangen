@@ -73,7 +73,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .slide-enter-active {
   transition: opacity 1.5s;
 }
