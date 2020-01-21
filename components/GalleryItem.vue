@@ -155,7 +155,6 @@ export default {
   .gallery-item {
     height: 100%;
     width: 50%;
-    border: 10px solid red;
   }
 }
 
@@ -163,7 +162,6 @@ export default {
   .gallery-item {
     height: 100%;
     width: 33.33%;
-    border: 10px solid red;
   }
 }
 </style>
