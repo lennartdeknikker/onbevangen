@@ -7,7 +7,7 @@
     <div class="quotes-text-wrapper">
       <ul class="quotes">
         <li v-for="quote of woman.quotes" :key="quote" class="quote">
-          {{ quote }}
+          "{{ quote }}"
         </li>
       </ul>
     </div>
@@ -116,6 +116,13 @@ export default {
   .quote {
     margin-top: 0;
     margin-bottom: 2em;
+  }
+
+  .full-name,
+  .about-text-wrapper,
+  .quotes-text-wrapper {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 </style>
