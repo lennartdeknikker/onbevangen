@@ -42,6 +42,17 @@ export default {
   /*
    ** Build configuration
    */
+  generate: {
+    routes() {
+      const fs = require('fs')
+      return fs.readdirSync('./assets/content/women').map((file) => {
+        return {
+          route: `/${file.slice(0, -5)}`,
+          payload: require(`./assets/content/women/${file}`)
+        }
+      })
+    }
+  },
   build: {
     /*
      ** You can extend webpack config here
