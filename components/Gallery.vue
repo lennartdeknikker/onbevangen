@@ -77,7 +77,23 @@ export default {
       return this.$store.state.women
     }
   },
+  mounted() {
+    this.photosToShow = this.checkMobile()
+  },
   methods: {
+    checkMobile() {
+      let photos = []
+      if (window) {
+        if (window.innerWidth < 700) {
+          photos = [1]
+        } else if (window.innerWidth < 1350) {
+          photos = [1, 2]
+        } else {
+          photos = [1, 2, 3]
+        }
+      }
+      return photos
+    },
     updatePhotosToShow(direction) {
       if (direction === 'left' && this.photosToShow[0] > 0) {
         this.photosToShow = this.photosToShow.map((x) => x - 1)

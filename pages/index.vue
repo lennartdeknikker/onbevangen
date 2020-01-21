@@ -52,7 +52,7 @@ export default {
   min-height: 100vh;
 }
 
-button {
+button:focus {
   outline: none;
 }
 </style>
