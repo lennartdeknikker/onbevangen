@@ -135,6 +135,11 @@ export default {
   overflow: hidden;
   cursor: pointer;
   z-index: 3;
+  transition: transform 1s ease;
+}
+
+.slide-button:hover {
+  transform: scale(1.2);
 }
 
 .slide-button:active {
