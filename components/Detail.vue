@@ -43,13 +43,11 @@ export default {
 .photo {
   width: 100%;
   grid-area: photo;
-  min-width: 12rem;
 }
 
 .quotes-text-wrapper {
   margin: 0 2.5rem;
   grid-area: quotes;
-  min-width: 15rem;
 }
 
 .about-text-wrapper {
