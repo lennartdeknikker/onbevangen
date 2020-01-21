@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 a {
   color: white;
   font-family: var(--font);

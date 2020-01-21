@@ -49,7 +49,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .mobile-menu-container {
   display: none;
 }

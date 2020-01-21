@@ -95,7 +95,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .gallery-container {
   width: 100%;
   height: 100vh;
