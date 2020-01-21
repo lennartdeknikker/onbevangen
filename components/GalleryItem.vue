@@ -17,7 +17,7 @@
               {{ woman.last_name }}
             </span>
           </h2>
-          <button class="button-more-info">
+          <a :href="route" class="button-more-info">
             <svg viewBox="0 0 253 253" class="plus-svg">
               <defs>
                 <style>
@@ -33,7 +33,7 @@
               <line class="a" x1="126.5" y1="4" x2="126.5" y2="249" />
               <line class="a" x1="4" y1="126.5" x2="249" y2="126.5" />
             </svg>
-          </button>
+          </a>
           <div class="info-wrapper">
             <h3 class="profession">{{ woman.profession }}</h3>
             <p class="function">{{ woman.function }}</p>
@@ -62,7 +62,8 @@ export default {
   },
   data() {
     return {
-      show: false
+      show: false,
+      route: `${this.woman.first_name.toLowerCase()}-${this.woman.last_name.toLowerCase()}`
     }
   },
   computed: {
