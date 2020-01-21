@@ -1,9 +1,18 @@
 <template>
   <nav class="nav-container">
     <ul class="full-menu">
-      <li class="nav-item"><a class="link" href="/nieuws">Nieuws</a></li>
       <li class="nav-item">
-        <a class="link" href="/informatie">Informatie</a>
+        <a :class="{ selected: page === 'nieuws' }" class="link" href="/nieuws"
+          >Nieuws</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          :class="{ selected: page === 'informatie' }"
+          class="link"
+          href="/informatie"
+          >Informatie</a
+        >
       </li>
       <li><Social /></li>
       <li class="nav-item">
@@ -21,10 +30,20 @@
       <ul v-if="showMobileMenu" class="mobile-menu">
         <li class="nav-item"><a class="link" href="/">Foto's</a></li>
         <li class="nav-item">
-          <a class="link" href="/informatie">Informatie</a>
+          <a
+            :class="{ selected: page === 'informatie' }"
+            class="link"
+            href="/informatie"
+            >Informatie</a
+          >
         </li>
         <li class="nav-item">
-          <a class="link" href="/nieuws">Nieuws</a>
+          <a
+            :class="{ selected: page === 'nieuws' }"
+            class="link"
+            href="/nieuws"
+            >Nieuws</a
+          >
         </li>
         <li class="nav-item"><Social /></li>
         <li class="nav-item">
@@ -44,6 +63,12 @@ import Social from './Social.vue'
 export default {
   components: {
     Social
+  },
+  props: {
+    page: {
+      type: String,
+      required: true
+    }
   },
   data() {
     return {
@@ -93,7 +118,11 @@ export default {
 }
 
 .language-indicator-not-selected {
-  color: #b3b3b3;
+  color: var(--grey-light);
+}
+
+.selected {
+  color: var(--grey-light);
 }
 
 @media (max-width: 780px) {

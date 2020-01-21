@@ -3,7 +3,7 @@
     <a href="/"
       ><h1 class="title">{{ title.toUpperCase() }}</h1></a
     >
-    <Navigation />
+    <Navigation :page="page" />
   </div>
 </template>
 
@@ -12,6 +12,12 @@ import Navigation from './Navigation.vue'
 export default {
   components: {
     Navigation
+  },
+  props: {
+    page: {
+      type: String,
+      required: true
+    }
   },
   data() {
     return {
