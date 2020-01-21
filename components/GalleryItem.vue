@@ -104,7 +104,7 @@ export default {
 /* content card styling */
 .content {
   height: 100%;
-  width: calc(100%-10em);
+  width: 100%;
   background-color: black;
   color: white;
   display: flex;
