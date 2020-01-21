@@ -26,7 +26,6 @@ export default {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  min-width: 600px;
 }
 .title {
   font-family: var(--font);

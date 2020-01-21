@@ -99,7 +99,7 @@ export default {
 @media (max-width: 780px) {
   .toggle-menu {
     display: flex;
-    position: fixed;
+    position: absolute;
     right: 2rem;
     top: 2rem;
     font-size: 1.5rem;
