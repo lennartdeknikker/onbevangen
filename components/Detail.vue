@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
 .detail-container {
-  padding: 10rem 2.5rem;
+  padding: 1rem 2.5rem;
   color: white;
   font-family: var(--font);
   display: grid;
@@ -43,13 +43,11 @@ export default {
 .photo {
   width: 100%;
   grid-area: photo;
-  min-width: 12rem;
 }
 
 .quotes-text-wrapper {
   margin: 0 2.5rem;
   grid-area: quotes;
-  min-width: 15rem;
 }
 
 .about-text-wrapper {

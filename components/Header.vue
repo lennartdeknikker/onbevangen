@@ -23,11 +23,9 @@ export default {
 
 <style>
 .header-container {
-  position: fixed;
   display: flex;
   width: 100%;
   justify-content: space-between;
-  z-index: 4;
   min-width: 600px;
 }
 .title {

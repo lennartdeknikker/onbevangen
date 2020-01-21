@@ -138,7 +138,7 @@ p {
 }
 
 .information-container {
-  padding: 10rem 2.5rem;
+  padding: 1rem 2.5rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

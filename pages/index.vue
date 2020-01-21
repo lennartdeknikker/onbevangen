@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header />
+    <Header class="fixed" />
     <Gallery />
   </div>
 </template>
@@ -55,5 +55,10 @@ export default {
 button:focus {
   outline: none;
   background: transparent;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 4;
 }
 </style>
