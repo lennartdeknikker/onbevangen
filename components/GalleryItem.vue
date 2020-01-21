@@ -63,7 +63,11 @@ export default {
   data() {
     return {
       show: false,
-      route: `${this.woman.first_name.toLowerCase()}-${this.woman.last_name.toLowerCase()}`
+      route: `${this.woman.first_name
+        .toLowerCase()
+        .replace(/\s+/g, '-')}-${this.woman.last_name
+        .toLowerCase()
+        .replace(/\s+/g, '-')}`
     }
   },
   computed: {
