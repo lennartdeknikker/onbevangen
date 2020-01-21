@@ -84,21 +84,7 @@ export default {
 
 .gallery-item {
   height: 100%;
-  width: 33.33%;
-}
-
-@media (max-width: 1350px) {
-  .gallery-item {
-    height: 100%;
-    width: 50%;
-  }
-}
-
-@media (max-width: 700px) {
-  .gallery-item {
-    height: 100%;
-    width: 100%;
-  }
+  width: 100%;
 }
 
 /* content card styling */
@@ -163,5 +149,19 @@ export default {
   font-family: var(--font);
   color: var(--grey);
   width: 10rem;
+}
+
+@media (min-width: 700px) {
+  .gallery-item {
+    height: 100%;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1350px) {
+  .gallery-item {
+    height: 100%;
+    width: 33.33%;
+  }
 }
 </style>
