@@ -102,7 +102,7 @@ export default {
 
 .trans-content-enter-active,
 .trans-content-leave-active {
-  transition: opacity 0.3s;
+  transition: opacity 0.4s;
 }
 
 .trans-content-enter,
@@ -118,6 +118,10 @@ export default {
   font-size: 10rem;
   width: 8rem;
   cursor: pointer;
+}
+
+.button-more-info:hover {
+  transform: scale(1.2);
 }
 
 .name {
