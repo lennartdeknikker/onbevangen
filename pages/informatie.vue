@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header />
+    <Header :page="'informatie'" />
     <Information />
   </div>
 </template>
@@ -39,6 +39,7 @@ export default {
 :root {
   --font: 'PT Sans Narrow', sans-serif;
   --grey: rgb(94, 94, 94);
+  --grey-light: #b3b3b3;
 }
 
 .container {
