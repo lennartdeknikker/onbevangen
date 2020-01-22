@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header class="fixed" />
+    <Header :page="'index'" class="fixed" />
     <Gallery />
   </div>
 </template>
