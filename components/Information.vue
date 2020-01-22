@@ -34,10 +34,15 @@
         </li>
         <li><span class="task">Eindredactie:</span> Ingeborg van der Ven</li>
         <li><span class="task">Fotografie:</span> Freek van den Bergh</li>
-        <li><span class="task">Website:</span> Lennart de Knikker</li>
+        <li>
+          <span class="task">Website:</span> Lennart de Knikker,
+          <a class="link-in-text" href="https://lenn4rt.com/">lenn4RT.com</a>
+        </li>
         <li>
           <span class="task">Vormgeving:</span> *Glitterstudio
-          www.glitterstudio.nl
+          <a class="link-in-text" href="https://www.glitterstudio.nl/"
+            >www.glitterstudio.nl</a
+          >
         </li>
         <li>
           <span class="task">Productie expositie:</span> Kiekie Fotolab Planemos
@@ -150,7 +155,20 @@ p {
 
 .link-in-text {
   font-size: 1em;
-  font-weight: bold;
+  transition: font-size 0.5s ease;
+}
+
+.link-in-text:hover {
+  font-size: 1.1em;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  height: 100vh;
+  justify-content: center;
 }
 
 @media (max-width: 800px) {

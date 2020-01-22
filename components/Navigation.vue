@@ -15,7 +15,7 @@
         >
       </li>
       <li><Social /></li>
-      <li class="nav-item">
+      <li v-if="enableMultiLang" class="nav-item">
         <a class="link" href="#"
           ><span class="language-indicator-not-selected">EN</span>/<span
             >NL</span
@@ -88,7 +88,7 @@
           >
         </li>
         <li class="nav-item"><Social /></li>
-        <li class="nav-item">
+        <li v-if="enableMultiLang" class="nav-item">
           <a href="#" class="language-indicators link"
             ><span class="language-indicator-not-selected">EN</span>/<span
               >NL</span
@@ -114,7 +114,8 @@ export default {
   },
   data() {
     return {
-      showMobileMenu: false
+      showMobileMenu: false,
+      enableMultiLang: false
     }
   }
 }

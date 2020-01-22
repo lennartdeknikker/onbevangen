@@ -2,6 +2,7 @@
   <div class="gallery-container">
     <button
       @click="updatePhotosToShow('left')"
+      v-if="possibleLeft"
       class="slide-button-left slide-button"
     >
       <svg
@@ -35,6 +36,7 @@
     </GalleryItem>
     <button
       @click="updatePhotosToShow('right')"
+      v-if="possibleRight"
       class="slide-button-right slide-button"
     >
       <svg
@@ -69,7 +71,9 @@ export default {
   },
   data() {
     return {
-      photosToShow: [1, 2, 3]
+      photosToShow: [1, 2, 3],
+      possibleLeft: true,
+      possibleRight: true
     }
   },
   computed: {
@@ -85,8 +89,10 @@ export default {
       let photos = []
       if (window) {
         if (window.innerWidth < 700) {
+          this.mobile = true
           photos = [1]
         } else if (window.innerWidth < 1350) {
+          this.mobile = true
           photos = [1, 2]
         } else {
           photos = [1, 2, 3]
@@ -97,6 +103,12 @@ export default {
     updatePhotosToShow(direction) {
       if (direction === 'left' && this.photosToShow[0] > 0) {
         this.photosToShow = this.photosToShow.map((x) => x - 1)
+        if (this.photosToShow[0] === 0) this.possibleLeft = false
+        if (
+          this.photosToShow[this.photosToShow.length - 1] <
+          this.women.length - 1
+        )
+          this.possibleRight = true
       }
 
       if (
@@ -105,6 +117,12 @@ export default {
           this.$store.state.women.length - 1
       ) {
         this.photosToShow = this.photosToShow.map((x) => x + 1)
+        if (
+          this.photosToShow[this.photosToShow.length - 1] ===
+          this.women.length - 1
+        )
+          this.possibleRight = false
+        if (this.photosToShow[0] > 0) this.possibleLeft = true
       }
     }
   }
