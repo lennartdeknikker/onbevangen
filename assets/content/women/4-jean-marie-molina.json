@@ -1,0 +1,32 @@
+{
+  "position": 4,
+  "first_name": "Jean Marie",
+  "last_name": "Molina",
+  "profession": {
+    "nl": "Hoofddocent"
+  },
+  "function": {
+    "nl": "Onderwijsmethodiek Tough Love Hogeschool Rotterdam"
+  },
+  "quotes": [
+    {
+      "quote": {
+        "nl": "Mijn Tough Love methode staat voor twee dingen: erkenning van de persoon die een student is en vervolgens die persoon inzetten als instrument tot succes.",
+        "en": "My Tough Love method stands for two things: recognizing the person who is the student and using that person as an instrument to success."
+      }
+    },
+    {
+      "quote": {
+        "nl": "Mijn professor zei: ‘Een promotieplek zit er niet in voor jou. Hier aan de universiteit zijn we nog niet klaar voor kleur.’",
+        "en": "My professor told me: ‘A PhD is not for you. Here at the university, we are not ready for color.’"
+      }
+    },
+    {
+      "quote": {
+        "nl": "De wereld heeft een bepaalde vanzelfsprekendheid voor andere vrouwen die er voor mij niet is. Voor zwarte meisjes geldt dat ze naar rolmodellen kijken en niet weten hoe diegene daar is gekomen. En daarom is het zo belangrijk om dat rolmodel te zijn.",
+        "en": "The world has a certain naturalness for other women that it does not have for me. Black girls look for role models without knowing how that person got there. And that is why it is so important to be that role model."
+      }
+    }
+  ],
+  "image": "/images/upload/jean-marie.png"
+}
