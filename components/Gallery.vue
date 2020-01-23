@@ -82,7 +82,16 @@ export default {
   },
   computed: {
     women() {
-      return this.$store.state.women
+      function compare(a, b) {
+        if (a.position < b.position) {
+          return -1
+        }
+        if (a.position > b.position) {
+          return 1
+        }
+        return 0
+      }
+      return this.$store.state.women.slice().sort(compare)
     }
   },
   mounted() {

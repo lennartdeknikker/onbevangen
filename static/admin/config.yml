@@ -12,7 +12,7 @@ collections:
     label: 'General configuration'
     format: 'json'
     folder: 'assets/content/general'
-    create: true
+    create: false
     delete: false
     slug: '{{slug}}'
     editor:
@@ -31,6 +31,41 @@ collections:
               name: 'FAIconClass',
               widget: 'string',
             }
+  - name: 'information'
+    label: 'Informatie'
+    description: >
+      Pas hier de tekst van de pagina 'informatie' aan.
+    format: 'json'
+    folder: 'assets/content'
+    create: true
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    identifier_field: text
+    fields:
+      - label: 'Tekst'
+        name: 'text'
+        widget: 'object'
+        fields:
+          - { name: 'introduction', label: 'Introductie', widget: 'text' }
+          - { name: 'quote', label: 'Quote', widget: 'text' }
+          - { name: 'author', label: 'Auteur', widget: 'string' }
+          - { name: 'introduction', label: 'introductie', widget: 'text' }
+      - label: 'Dankwoord'
+        name: 'thanks'
+        widget: 'object'
+        fields:
+          - label: 'koptekst'
+            name: 'head'
+            widget: 'string'
+          - label: 'Quote'
+            name: 'quote'
+            widget: 'list'
+            allow_add: true
+            fields:
+              - { label: 'Taak', name: 'task', widget: 'string', required: true }
+              - { label: 'Naam', name: 'name', widget: 'string', required: true }
 
   - name: 'persons'
     label: 'Vrouwen in de serie'
