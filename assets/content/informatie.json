@@ -1,0 +1,21 @@
+{
+  "pagename": "Informatie",
+  "text": {
+    "introduction": "intro",
+    "quote": "quote",
+    "author": "auteur"
+  },
+  "thanks": {
+    "head": "koptekst",
+    "helper": [
+      {
+        "task": "taak1",
+        "name": "naam1"
+      },
+      {
+        "task": "taak2",
+        "name": "naam2"
+      }
+    ]
+  }
+}
