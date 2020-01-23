@@ -26,7 +26,16 @@ export default {
         type: 'image/png',
         sizes: '32x32',
         href: '/favicon-32x32.png'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap'
       }
+    ],
+    script: [
+      { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+      { src: 'https://kit.fontawesome.com/80d7baaf7e.js' }
     ]
   },
   /*
