@@ -44,7 +44,7 @@ collections:
       preview: false
     identifier_field: pagename
     fields:
-      - { label: 'Naam van de pagina', name: 'pagename' widget: 'text' }
+      - { label: 'Naam van de pagina', name: 'pagename', widget: 'text' }
       - label: 'Tekst'
         name: 'text'
         widget: 'object'
