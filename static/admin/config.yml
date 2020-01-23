@@ -42,8 +42,9 @@ collections:
     slug: '{{slug}}'
     editor:
       preview: false
-    identifier_field: author
+    identifier_field: pagename
     fields:
+      - { label: 'Naam van de pagina', name: 'pagename' widget: 'text' }
       - label: 'Tekst'
         name: 'text'
         widget: 'object'
