@@ -65,7 +65,7 @@ collections:
         name: 'quotes'
         widget: 'list'
         allow_add: true
-        fields:
+        field:
           - label: 'Quote'
             name: 'quote'
             widget: object
