@@ -4,5 +4,8 @@ export default {
   },
   setSocial(state, social) {
     state.social = social
+  },
+  setInformation(state, information) {
+    state.information = information
   }
 }

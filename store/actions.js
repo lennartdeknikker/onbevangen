@@ -24,7 +24,20 @@ export default {
       return res
     })
 
+    // information data
+    const informationFiles = await require.context(
+      '~/assets/content/information/',
+      false,
+      /\.json$/
+    )
+    const information = informationFiles.keys().map((key) => {
+      const res = informationFiles(key)
+      res.slug = key.slice(2, -5)
+      return res
+    })
+
     await commit('setSocial', social)
     await commit('setWomen', women)
+    await commit('setInformation', information)
   }
 }

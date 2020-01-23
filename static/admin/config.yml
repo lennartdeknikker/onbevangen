@@ -36,7 +36,7 @@ collections:
     description: >
       Pas hier de tekst van de pagina 'informatie' aan.
     format: 'json'
-    folder: 'assets/content'
+    folder: 'assets/content/information'
     create: true
     delete: false
     slug: '{{slug}}'
@@ -44,7 +44,7 @@ collections:
       preview: false
     identifier_field: pagename
     fields:
-      - { label: 'Naam van de pagina', name: 'pagename', widget: 'text' }
+      - { label: 'Naam van de pagina', name: 'pagename', widget: 'string' }
       - label: 'Tekst'
         name: 'text'
         widget: 'object'
@@ -60,7 +60,7 @@ collections:
             name: 'head'
             widget: 'string'
           - label: 'medewerker'
-            name: 'helper'
+            name: 'helpers'
             widget: 'list'
             allow_add: true
             fields:

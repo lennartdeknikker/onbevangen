@@ -4,5 +4,8 @@ export default {
   },
   getSocial(state) {
     return state.social
+  },
+  getInformation(state) {
+    return state.information
   }
 }

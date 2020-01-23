@@ -3,26 +3,25 @@
     <section class="text">
       <article>
         <p class="introduction">
-          Onbevangen is een serie naar het idee van journalist Ingeborg van der
-          Ven. De verhalen van 8 vrouwen werkzaam op een toppositie binnen de
-          Nederlandse kennissector. De portretten zijn sinds juni 2018 in
-          ontwikkeling en vormen met het verhaal van Ingeborg zelf een serie van
-          9. Politiek fotograaf Freek van den Bergh heeft de serie een extra
-          dimensie gegeven door elke vrouw op een speciale locatie te
-          portretteren.
+          {{ information.text.introduction }}
         </p>
         <p class="quote">
-          "We zetten onszelf graag vast in denkpatronen. Het is veilig. Jij bent
-          bestuurder, jij docent. Dit is hoe het eruit ziet. Daarmee kunnen we
-          het benoemen, gezamenlijk bespreken en aan elkaar overbrengen. Ik vond
-          het geweldig om het afgelopen jaar te spelen met deze patronen."
+          {{ information.text.quote }}
         </p>
-        <p class="ingeborg">Ingeborg van der Ven</p>
+        <p class="ingeborg">
+          {{ information.text.author }}
+        </p>
       </article>
     </section>
     <section class="thanks-text">
-      <h2 class="thanks-title">Dankzij alle medewerking van:</h2>
+      <h2 class="thanks-title">{{ information.thanks.head }}</h2>
       <ul class="thanks-list">
+        <li v-for="helper of information.thanks.helpers" :key="helper.name">
+          <span class="task">{{ helper.task }}:</span> {{ helper.name }}
+        </li>
+        <br />
+        <br />
+        <br />
         <li>
           <span class="task">Projectteam:</span> Naar een idee van Ingeborg van
           der Ven
@@ -65,6 +64,9 @@
 <script>
 export default {
   computed: {
+    information() {
+      return this.$store.state.information[0]
+    },
     social() {
       return this.$store.state.social[0].social
     },
