@@ -63,13 +63,12 @@ collections:
           - { label: 'EN', name: 'en', widget: 'string', required: false }
       - label: 'Uitspraken'
         name: 'quotes'
-        widget: 'object'
+        widget: 'list'
         allow_add: true
         fields:
           - label: 'Quote'
             name: 'quote'
             widget: object
-            allow_add: true
             fields:
               - { label: 'NL', name: 'nl', widget: 'string', required: true }
               - { label: 'EN', name: 'en', widget: 'string', required: false }
