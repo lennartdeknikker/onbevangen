@@ -1,0 +1,33 @@
+{
+  "position": 7,
+  "first_name": "Joanne",
+  "last_name": "van der Leun",
+  "profession": {
+    "nl": "Decaan",
+    "en": "Dean"
+  },
+  "function": {
+    "nl": "Hoogleraar Criminologie Universiteit Leiden"
+  },
+  "quotes": [
+    {
+      "quote": {
+        "nl": "Op een reis naar Indonesië liep ik tyfus op. Dit was zo’n moment waarop ik voelde; ‘O wacht, je kan ook doodgaan.’ Ik werd gedwongen het roer om te gooien.",
+        "en": "On a trip to Indonesia, I caught typhus. In that moment, I realized ‘Hang on, you can die too’. That forced me to change course."
+      }
+    },
+    {
+      "quote": {
+        "nl": "Het was heel bijzonder, want Engbersen zei op die eerste dag: ‘Dit is het begin van een academische carrière.’ Daar sprak veel vertrouwen uit. Zo is het steeds gegaan. Als ik een kans krijg, dan pak ik hem.",
+        "en": "It was very special when Engbersen said on that first day: ‘This is the start of an academic career.’ He had faith in me. It has always been like that: When I get a chance, I grab it."
+      }
+    },
+    {
+      "quote": {
+        "nl": "De grootste uitdaging voor de sector op dit moment is de cultuur van gezamenlijkheid. In de academie is heel veel aandacht voor individuele successen. Maar uiteindelijk bereik je het allerbeste met elkaar.",
+        "en": "The biggest challenge for this sector is a culture of collectivity. There is a lot of attention for individual success in academia. But in the end, you reach the very best if you work together."
+      }
+    }
+  ],
+  "image": "/images/upload/joanne.png"
+}
