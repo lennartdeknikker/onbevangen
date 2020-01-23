@@ -43,7 +43,7 @@ collections:
     slug: '{{year}}-{{month}}-{{day}}-{{first_name}}-{{last_name}}-{{slug}}'
     summary: '{{first_name}} {{last_name}}'
     editor:
-      preview: true
+      preview: false
     identifier_field: last_name
     fields:
       - { label: 'positie in de fotoserie', name: 'position', widget: 'number' }
@@ -53,33 +53,23 @@ collections:
         name: 'profession'
         widget: 'object'
         fields:
-          - { label: 'Beroep', name: 'nl', widget: 'string', required: true }
-          - {
-              label: 'Beroep (EN)',
-              name: 'en',
-              widget: 'string',
-              required: false,
-            }
-      - { label: 'Functie', name: 'function', widget: 'string' }
-      - {
-          label: 'Functie (EN)',
-          name: 'function_en',
-          widget: 'string',
-          required: false,
-        }
-      - {
-          label: 'Uitspraken',
-          name: 'quotes',
-          widget: 'list',
-          allow_add: true,
-          field: { label: 'Quote', name: 'quote', widget: string },
-        }
-      - {
-          label: 'Uitspraken (EN)',
-          name: 'quotes_en',
-          widget: 'list',
-          allow_add: true,
-          field: { label: 'Quote', name: 'quote_en', widget: string },
-          required: false,
-        }
+          - { label: 'NL', name: 'nl', widget: 'string', required: true }
+          - { label: 'EN', name: 'en', widget: 'string', required: false }
+      - label: 'Functie'
+        name: 'function'
+        widget: 'object'
+        fields:
+          - { label: 'NL', name: 'nl', widget: 'string', required: true }
+          - { label: 'EN', name: 'en', widget: 'string', required: false }
+      - label: 'Uitspraken'
+        name: 'quotes'
+        widget: 'object'
+        allow_add: true
+        field:
+          - label: 'Quote'
+            name: 'quote'
+            widget: object
+            fields:
+              - { label: 'NL', name: 'nl', widget: 'string', required: true }
+              - { label: 'EN', name: 'en', widget: 'string', required: false }
       - { label: 'Uitgelichte foto', name: 'image', widget: 'image' }
