@@ -19,43 +19,6 @@
         <li v-for="helper of information.thanks.helpers" :key="helper.name">
           <span class="task">{{ helper.task }}:</span> {{ helper.name }}
         </li>
-        <br />
-        <br />
-        <br />
-        <li>
-          <span class="task">Projectteam:</span> Naar een idee van Ingeborg van
-          der Ven
-        </li>
-        <li><span class="task">Interviews:</span> Ingeborg van der Ven</li>
-        <li>
-          <span class="task">Redactie:</span> Manon Blonk Marliese Vollebregt
-          Katrin Blomquist Rosanne Sanne Bakelaar
-        </li>
-        <li><span class="task">Eindredactie:</span> Ingeborg van der Ven</li>
-        <li><span class="task">Fotografie:</span> Freek van den Bergh</li>
-        <li>
-          <span class="task">Website:</span> Lennart de Knikker,
-          <a class="link-in-text" href="https://lenn4rt.com/">lenn4RT.com</a>
-        </li>
-        <li>
-          <span class="task">Vormgeving:</span> *Glitterstudio
-          <a class="link-in-text" href="https://www.glitterstudio.nl/"
-            >www.glitterstudio.nl</a
-          >
-        </li>
-        <li>
-          <span class="task">Productie expositie:</span> Kiekie Fotolab Planemos
-        </li>
-        <li>
-          <span class="task">Bijzonder speciale dank aan:</span> Rianne
-          Letschert Ingrid van Engelshoven Jean Marie Molina Kitty Nijmeijer
-          Nienke Meijer Aminata Caïro Joanne van der Leun Susana Menéndez
-        </li>
-        <li>
-          <span class="task">En:</span> Rijkmuseum Boerhaave Kunstmuseum Den
-          Haag Tropenmuseum Hotel Arena Amsterdam Jakarta Hotel Hortus Botanicus
-          Leiden Alle ondersteunende staf, secretaresses, facilitair medewerkers
-        </li>
       </ul>
     </section>
   </div>
