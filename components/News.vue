@@ -3,9 +3,19 @@
     <section class="text">
       <article>
         <p class="exposition-text launch-text">
+          {{ news.head }}
           Lancering: 27-01-2020 17:00 Ministerie van Onderwijs, Cultuur en
           Wetenschap.
         </p>
+        <p
+          v-for="item of news.alineas"
+          :key="item.text"
+          class="exposition-text"
+        >
+          {{ item.text }}
+        </p>
+
+        <br />
         <p class="exposition-text">
           Alle updates over wanneer Onbevangen in uw plaats te zien is krijgt u
           via <a :href="facebookLink" class="link-in-text">Facebook</a> of
@@ -116,21 +126,6 @@ export default {
   computed: {
     news() {
       return this.$store.state.news[0]
-    },
-    social() {
-      return this.$store.state.social[0].social
-    },
-    facebookLink() {
-      function isFbLink(link) {
-        return link.name === 'Facebook'
-      }
-      return this.social.find(isFbLink).link
-    },
-    instagramLink() {
-      function isFbLink(link) {
-        return link.name === 'Instagram'
-      }
-      return this.social.find(isFbLink).link
     }
   }
 }

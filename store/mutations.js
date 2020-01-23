@@ -8,7 +8,7 @@ export default {
   setInformation(state, information) {
     state.information = information
   },
-  setInformation(state, news) {
-    state.information = news
+  setNews(state, news) {
+    state.news = news
   }
 }
