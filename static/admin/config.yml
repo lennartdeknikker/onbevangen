@@ -37,7 +37,7 @@ collections:
     description: >
       Pas hier de tekst van de pagina 'Nieuws' aan.
     format: 'json'
-    folder: 'assets/content/nieuws'
+    folder: 'assets/content/news'
     create: true
     delete: false
     slug: '{{slug}}'
