@@ -111,7 +111,7 @@ export default {
     return {
       showMobileMenu: false,
       enableMultiLang: false,
-      online: false
+      online: true
     }
   }
 }
