@@ -1,20 +1,20 @@
 {
   "pagename": "Informatie",
   "text": {
-    "introduction": "intro",
-    "quote": "quote",
-    "author": "auteur"
+    "introduction": "Onbevangen is een serie naar het idee van journalist Ingeborg van der Ven. De verhalen van 8 vrouwen werkzaam op een toppositie binnen de Nederlandse kennissector. De portretten zijn sinds juni 2018 in ontwikkeling en vormen met het verhaal van Ingeborg zelf een serie van 9. Politiek fotograaf Freek van den Bergh heeft de serie een extra dimensie gegeven door elke vrouw op een speciale locatie te portretteren.",
+    "quote": "\"We zetten onszelf graag vast in denkpatronen. Het is veilig. Jij bent bestuurder, jij docent. Dit is hoe het eruit ziet. Daarmee kunnen we het benoemen, gezamenlijk bespreken en aan elkaar overbrengen. Ik vond het geweldig om het afgelopen jaar te spelen met deze patronen.\"",
+    "author": "Ingeborg van der Ven"
   },
   "thanks": {
-    "head": "koptekst",
+    "head": "Dankzij alle medewerking van:",
     "helper": [
       {
-        "task": "taak1",
-        "name": "naam1"
+        "task": "Projectteam",
+        "name": "Naar een idee van Ingeborg van der Ven"
       },
       {
-        "task": "taak2",
-        "name": "naam2"
+        "task": "Website",
+        "name": "Lennart de Knikker, <a class=\"link-in-text\" href=\"https://lenn4rt.com/\">lenn4RT.com</a>"
       }
     ]
   }
