@@ -4,8 +4,6 @@
       <article>
         <p class="exposition-text launch-text">
           {{ news.head }}
-          Lancering: 27-01-2020 17:00 Ministerie van Onderwijs, Cultuur en
-          Wetenschap.
         </p>
         <p
           v-for="item of news.alineas"
@@ -13,25 +11,6 @@
           class="exposition-text"
         >
           {{ item.text }}
-        </p>
-
-        <br />
-        <p class="exposition-text">
-          Alle updates over wanneer Onbevangen in uw plaats te zien is krijgt u
-          via <a :href="facebookLink" class="link-in-text">Facebook</a> of
-          <a :href="instagramLink" class="link-in-text">Instagram</a>.
-        </p>
-        <p class="exposition-text">
-          Wilt u heel graag bij de lancering in Den Haag aanwezig zijn? Mail ons
-          en we gaan kijken wat wij voor u kunnen doen. Registratie is
-          verplicht.
-        </p>
-        <p class="exposition-text">
-          Voor meer informatie over de mogelijkheden om de expositie binnen uw
-          instelling te laten zien kunt u mailen naar
-          <a class="link-in-text" href="mailto:contact@ingeborgvanderven.nl">
-            contact@ingeborgvanderven.nl</a
-          >.
         </p>
         <!-- Begin Mailchimp Signup Form -->
         <div id="mc_embed_signup" class="mailchimp-form-container">
@@ -126,6 +105,21 @@ export default {
   computed: {
     news() {
       return this.$store.state.news[0]
+    },
+    social() {
+      return this.$store.state.social[0].social
+    },
+    facebookLink() {
+      function isFbLink(link) {
+        return link.name === 'Facebook'
+      }
+      return this.social.find(isFbLink).link
+    },
+    instagramLink() {
+      function isFbLink(link) {
+        return link.name === 'Instagram'
+      }
+      return this.social.find(isFbLink).link
     }
   }
 }
