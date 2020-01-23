@@ -1,0 +1,32 @@
+{
+  "position": 5,
+  "first_name": "Ingeborg",
+  "last_name": "van der Ven",
+  "profession": {
+    "nl": "Journalist"
+  },
+  "function": {
+    "nl": "Creator Onbevangen"
+  },
+  "quotes": [
+    {
+      "quote": {
+        "nl": "We zetten onszelf graag vast in beelden en denkpatronen. ‘Jij bent bestuurder, jij docent.’ Dit biedt ons een schijnbare veiligheid. Ik vond het geweldig om het afgelopen jaar met deze beelden te spelen.",
+        "en": "We like to define clear images and ways of thinking. ‘You are a manager, you are a teacher.’ This gives us the illusion of security. Over the past year, I have enjoyed playing these images around."
+      }
+    },
+    {
+      "quote": {
+        "nl": "Kijken en luisteren naar de vrouwen die het nu doen. Dat is wat ik met deze serie heb gedaan. Zeker nu politiek fotograaf Freek van den Bergh zorgt voor een letterlijk portret.",
+        "en": "Observing and listening to the women that are doing it right now. That is what I intended for this series. Especially now that photojournalist Freek van den Bergh made actual visual portraits."
+      }
+    },
+    {
+      "quote": {
+        "nl": "De ruimte innemen die je ambieert is een belangrijke voorwaarde om mee te kunnen doen. Onbevangen, helemaal zoals je bent. En daar kan je niemand anders verantwoordelijk voor maken.",
+        "en": "Taking up the space that you aspire is an important condition to take part in the game. Unapologetic, just the way you are. This is a responsibility you cannot put on anyone else."
+      }
+    }
+  ],
+  "image": "/images/upload/ingeborg.png"
+}
