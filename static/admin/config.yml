@@ -42,7 +42,7 @@ collections:
     slug: '{{slug}}'
     editor:
       preview: false
-    identifier_field: text
+    identifier_field: author
     fields:
       - label: 'Tekst'
         name: 'text'
@@ -51,7 +51,6 @@ collections:
           - { name: 'introduction', label: 'Introductie', widget: 'text' }
           - { name: 'quote', label: 'Quote', widget: 'text' }
           - { name: 'author', label: 'Auteur', widget: 'string' }
-          - { name: 'introduction', label: 'introductie', widget: 'text' }
       - label: 'Dankwoord'
         name: 'thanks'
         widget: 'object'
@@ -59,13 +58,23 @@ collections:
           - label: 'koptekst'
             name: 'head'
             widget: 'string'
-          - label: 'Quote'
-            name: 'quote'
+          - label: 'medewerker'
+            name: 'helper'
             widget: 'list'
             allow_add: true
             fields:
-              - { label: 'Taak', name: 'task', widget: 'string', required: true }
-              - { label: 'Naam', name: 'name', widget: 'string', required: true }
+              - {
+                  label: 'Taak',
+                  name: 'task',
+                  widget: 'string',
+                  required: true,
+                }
+              - {
+                  label: 'Naam',
+                  name: 'name',
+                  widget: 'string',
+                  required: true,
+                }
 
   - name: 'persons'
     label: 'Vrouwen in de serie'
