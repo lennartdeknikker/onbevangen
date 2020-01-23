@@ -41,7 +41,7 @@ collections:
     folder: 'assets/content/women'
     create: true
     slug: '{{position}}-{{first_name}}-{{last_name}}'
-    summary: '{{first_name}} {{last_name}}'
+    summary: '{{first_name}} {{last_name}} ({{position}})'
     editor:
       preview: false
     identifier_field: last_name
