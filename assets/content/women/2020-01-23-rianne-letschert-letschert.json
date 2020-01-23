@@ -1,0 +1,34 @@
+{
+  "position": 1,
+  "first_name": "Rianne",
+  "last_name": "Letschert",
+  "profession": {
+    "nl": "Collegevoorzitter",
+    "en": "President of the Board"
+  },
+  "function": {
+    "nl": "Marketing Psycholoog",
+    "en": "Marketing Psychologist"
+  },
+  "quotes": [
+    {
+      "quote": {
+        "nl": "Als we de transities willen maken die nu nodig zijn, dan moeten we fouten kunnen maken en dat gaat in het huidige politieke en media-landschap niet meer. We zitten gevangen in de middenmoot.",
+        "en": "If  we  want  to  make  the  transitions  that are necessary now, we need to be able to make mistakes. And that is  not  possible  in  today’s  political  and  media  landscape.  We  are  stuck  in the middle."
+      }
+    },
+    {
+      "quote": {
+        "nl": "Creativiteit in combinatie met nieuwsgierigheid is hetgeen dat we het meeste moeten cultiveren, daar draait ons werk om.",
+        "en": "Creativity combined with curiosity is exactly what we have to cultivate the most, this is the essence of our work."
+      }
+    },
+    {
+      "quote": {
+        "nl": "Dit  soort  veranderingen  zijn  evolutionair.  Het  vraagt  om  een  wezenlijk  andere  blik  op  de  sector.  Alleen  moeten  we  deze  stappen  wel  nu  gaan zetten.",
+        "en": "These  kinds  of  changes  are  evolutionary. They require a fundamentally different perspective on the sector. However, we do have to take these steps now."
+      }
+    }
+  ],
+  "image": "/images/upload/rianne.png"
+}
