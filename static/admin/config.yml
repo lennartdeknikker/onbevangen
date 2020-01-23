@@ -52,7 +52,7 @@ collections:
         name: 'alineas'
         widget: 'list'
         allow_add: true
-        field:
+        fields:
           - { label: 'Tekst', name: 'text', widget: 'text', required: true }
 
   - name: 'information'
