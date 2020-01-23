@@ -40,7 +40,7 @@ collections:
     format: 'json'
     folder: 'assets/content/women'
     create: true
-    slug: '{{position}}-{{first_name}}-{{last_name}}-{{slug}}'
+    slug: '{{position}}-{{first_name}}-{{last_name}}'
     summary: '{{first_name}} {{last_name}}'
     editor:
       preview: false

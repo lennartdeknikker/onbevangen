@@ -35,8 +35,8 @@
             </svg>
           </a>
           <div class="info-wrapper">
-            <h3 class="profession">{{ woman.profession }}</h3>
-            <p class="function">{{ woman.function }}</p>
+            <h3 class="profession">{{ woman.profession.nl }}</h3>
+            <p class="function">{{ woman.function.nl }}</p>
           </div>
         </div>
       </transition>
@@ -63,7 +63,9 @@ export default {
   data() {
     return {
       show: false,
-      route: `${this.woman.first_name
+      route: `${
+        this.woman.position
+      }-${this.woman.first_name
         .toLowerCase()
         .replace(/\s+/g, '-')}-${this.woman.last_name
         .toLowerCase()

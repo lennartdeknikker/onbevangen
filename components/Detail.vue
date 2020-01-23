@@ -6,14 +6,14 @@
     </h2>
     <div class="quotes-text-wrapper">
       <ul class="quotes">
-        <li v-for="quote of woman.quotes" :key="quote" class="quote">
-          "{{ quote }}"
+        <li v-for="item of woman.quotes" :key="item.quote.nl" class="quote">
+          "{{ item.quote.nl }}"
         </li>
       </ul>
     </div>
     <div class="about-text-wrapper">
-      <h3 class="profession">{{ woman.profession }}</h3>
-      <p class="function">{{ woman.function }}</p>
+      <h3 class="profession">{{ woman.profession.nl }}</h3>
+      <p class="function">{{ woman.function.nl }}</p>
     </div>
   </div>
 </template>
