@@ -1,0 +1,32 @@
+{
+  "position": 8,
+  "first_name": "Susana",
+  "last_name": "Menéndez",
+  "profession": {
+    "nl": "Toezichthouder"
+  },
+  "function": {
+    "nl": "Historica Europa"
+  },
+  "quotes": [
+    {
+      "quote": {
+        "nl": "Mijn promotie schreef ik in het Spaans, met speciale toestemming. Het ging om een analyse van 30 jaar migratie door Latijns-Amerikaanse vrouwen en de relatie met het politieke discours. Ik wilde iets teruggeven aan de regio.",
+        "en": "With a special permission, I wrote my doctoral thesis in Spanish. An analysis of 30 years of migration of LatinAmerican women and its relation to the political discourse. I wanted to give something back to the region."
+      }
+    },
+    {
+      "quote": {
+        "nl": "Het gesprek over diversiteit brengt ook veel met zich mee. Het schuurt. Je moet je strijdplan goed hebben. Je kan niet elke dag voor alles vechten.",
+        "en": "The conversation on diversity involves a lot. It makes people uncomfortable. You need to have a battle plan. You can’t fight for everything every day."
+      }
+    },
+    {
+      "quote": {
+        "nl": "Voor mij is het onderwijs de meest vrolijke en hoopvolle sector die er bestaat. Je probeert kansen te creëren voor jonge mensen. Ja, ik vind dat nog steeds één van de leukste dingen.",
+        "en": "In my view, education is the most cheerful and hopeful field out there. You try to create opportunities for young people. Yes, I still think that is one of the best things."
+      }
+    }
+  ],
+  "image": "/images/upload/susana.png"
+}
