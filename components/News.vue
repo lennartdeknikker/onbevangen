@@ -114,6 +114,9 @@
 <script>
 export default {
   computed: {
+    news() {
+      return this.$store.state.news[0]
+    },
     social() {
       return this.$store.state.social[0].social
     },

@@ -1,5 +1,6 @@
 export default () => ({
   women: [],
   social: [],
-  information: []
+  information: [],
+  news: []
 })

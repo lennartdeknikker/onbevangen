@@ -1,4 +1,12 @@
 {
   "pagename": "Nieuws",
-  "head": "tekst"
+  "head": "kop",
+  "alineas": [
+    {
+      "text": "a1"
+    },
+    {
+      "text": "a2"
+    }
+  ]
 }

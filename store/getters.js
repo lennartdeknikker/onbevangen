@@ -7,5 +7,8 @@ export default {
   },
   getInformation(state) {
     return state.information
+  },
+  getNews(state) {
+    return state.news
   }
 }

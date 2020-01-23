@@ -36,8 +36,21 @@ export default {
       return res
     })
 
+    // news data
+    const newsFiles = await require.context(
+      '~/assets/content/news/',
+      false,
+      /\.json$/
+    )
+    const news = newsFiles.keys().map((key) => {
+      const res = newsFiles(key)
+      res.slug = key.slice(2, -5)
+      return res
+    })
+
     await commit('setSocial', social)
     await commit('setWomen', women)
     await commit('setInformation', information)
+    await commit('setNews', news)
   }
 }
