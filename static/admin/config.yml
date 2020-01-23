@@ -33,10 +33,10 @@ collections:
             }
 
   - name: 'persons'
-    label: 'Persons in the series'
-    label_singular: 'Person'
+    label: 'Vrouwen in de serie'
+    label_singular: 'Vrouw'
     description: >
-      The persons in the list below will be shown on the website.
+      Voeg hieronder vrouwen toe aan de serie of verwijder deze.
     format: 'json'
     folder: 'assets/content/women'
     create: true
@@ -64,6 +64,7 @@ collections:
       - label: 'Uitspraken'
         name: 'quotes'
         widget: 'object'
+        allow_add: true
         fields:
           - label: 'Quote'
             name: 'quote'
