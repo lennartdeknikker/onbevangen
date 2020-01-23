@@ -49,13 +49,17 @@ collections:
       - { label: 'positie in de fotoserie', name: 'position', widget: 'number' }
       - { label: 'Voornaam', name: 'first_name', widget: 'string' }
       - { label: 'Achternaam', name: 'last_name', widget: 'string' }
-      - { label: 'Beroep', name: 'profession', widget: 'string' }
-      - {
-          label: 'Beroep (EN)',
-          name: 'profession_en',
-          widget: 'string',
-          required: false,
-        }
+      - label: 'Beroep'
+        name: 'profession'
+        widget: 'object'
+        fields:
+          - { label: 'Beroep', name: 'nl', widget: 'string', required: true }
+          - {
+              label: 'Beroep (EN)',
+              name: 'en',
+              widget: 'string',
+              required: false,
+            }
       - { label: 'Functie', name: 'function', widget: 'string' }
       - {
           label: 'Functie (EN)',
