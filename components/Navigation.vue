@@ -2,7 +2,10 @@
   <nav class="nav-container">
     <ul class="full-menu">
       <li class="nav-item">
-        <a :class="{ selected: page === 'nieuws' }" class="link" href="/nieuws"
+        <a
+          :class="{ selected: page === 'nieuws' }"
+          :href="online ? '/nieuws' : '/'"
+          class="link"
           >Nieuws</a
         >
       </li>
@@ -29,48 +32,40 @@
           v-if="!showMobileMenu"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 300 300"
-          class="i-cross"
+          class="i-menu"
         >
-          <defs>
-            <style>
-              .a {
-                fill: none;
-                stroke: white;
-                stroke-linecap: round;
-                stroke-miterlimit: 10;
-                stroke-width: 8px;
-              }
-            </style>
-          </defs>
-          <title>Artboard 4</title>
-          <line class="a" x1="37" y1="85" x2="282" y2="85" />
-          <line class="a" x1="37" y1="150" x2="282" y2="150" />
-          <line class="a" x1="37" y1="215" x2="282" y2="215" />
+          <title>open menu</title>
+          <line class="icon-line" x1="37" y1="85" x2="282" y2="85" />
+          <line class="icon-line" x1="37" y1="150" x2="282" y2="150" />
+          <line class="icon-line" x1="37" y1="215" x2="282" y2="215" />
         </svg>
         <svg
           v-if="showMobileMenu"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 300 300"
-          class="i-menu"
+          class="i-cross"
         >
-          <defs>
-            <style>
-              .a {
-                fill: none;
-                stroke: white;
-                stroke-linecap: round;
-                stroke-miterlimit: 10;
-                stroke-width: 8px;
-              }
-            </style>
-          </defs>
-          <title>Artboard 3</title>
-          <line class="a" x1="63.38" y1="63.38" x2="236.62" y2="236.62" />
-          <line class="a" x1="63.38" y1="236.62" x2="236.62" y2="63.38" />
+          <title>close menu</title>
+          <line
+            class="icon-line"
+            x1="63.38"
+            y1="63.38"
+            x2="236.62"
+            y2="236.62"
+          />
+          <line
+            class="icon-line"
+            x1="63.38"
+            y1="236.62"
+            x2="236.62"
+            y2="63.38"
+          />
         </svg>
       </button>
       <ul v-if="showMobileMenu" class="mobile-menu">
-        <li class="nav-item"><a class="link" href="/">Foto's</a></li>
+        <li v-if="online" class="nav-item">
+          <a class="link" href="/">Foto's</a>
+        </li>
         <li class="nav-item">
           <a
             :class="{ selected: page === 'informatie' }"
@@ -82,8 +77,8 @@
         <li class="nav-item">
           <a
             :class="{ selected: page === 'nieuws' }"
+            :href="online ? '/nieuws' : '/'"
             class="link"
-            href="/nieuws"
             >Nieuws</a
           >
         </li>
@@ -115,7 +110,8 @@ export default {
   data() {
     return {
       showMobileMenu: false,
-      enableMultiLang: false
+      enableMultiLang: false,
+      online: false
     }
   }
 }
@@ -171,6 +167,14 @@ export default {
 .i-cross,
 .i-menu {
   width: 1em;
+}
+
+.icon-line {
+  fill: none;
+  stroke: white;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 10px;
 }
 
 @media (max-width: 780px) {

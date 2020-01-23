@@ -2,6 +2,8 @@
   <div class="gallery-container">
     <button
       @click="updatePhotosToShow('left')"
+      @keyup.left="updatePhotosToShow('left')"
+      @keyup.right="updatePhotosToShow('right')"
       v-if="possibleLeft"
       class="slide-button-left slide-button"
     >
@@ -36,6 +38,8 @@
     </GalleryItem>
     <button
       @click="updatePhotosToShow('right')"
+      @keyup.right="updatePhotosToShow('right')"
+      @keyup.left="updatePhotosToShow('left')"
       v-if="possibleRight"
       class="slide-button-right slide-button"
     >
