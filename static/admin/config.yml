@@ -31,13 +31,37 @@ collections:
               name: 'FAIconClass',
               widget: 'string',
             }
+
+  - name: 'nieuws'
+    label: 'Nieuws'
+    description: >
+      Pas hier de tekst van de pagina 'Nieuws' aan.
+    format: 'json'
+    folder: 'assets/content/nieuws'
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    identifier_field: pagename
+    fields:
+      - { label: 'Naam van de pagina', name: 'pagename', widget: 'string' }
+      - { label: 'Koptekst', name: 'head', widget: 'text' }
+      - label: 'alineas'
+        label_singular: 'Alinea'
+        name: 'alineas'
+        widget: 'list'
+        allow_add: true
+        field:
+          - { label: 'Tekst', name: 'text', widget: 'text', required: true }
+
   - name: 'information'
     label: 'Informatie'
     description: >
-      Pas hier de tekst van de pagina 'informatie' aan.
+      Pas hier de tekst van de pagina 'Informatie' aan.
     format: 'json'
     folder: 'assets/content/information'
-    create: true
+    create: false
     delete: false
     slug: '{{slug}}'
     editor:

@@ -77,7 +77,8 @@ export default {
     return {
       photosToShow: [4, 5, 6],
       possibleLeft: true,
-      possibleRight: true
+      possibleRight: true,
+      mobile: false
     }
   },
   computed: {
