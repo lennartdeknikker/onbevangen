@@ -1,23 +1,18 @@
 <template>
   <div class="container">
-    <Header :page="'index'" class="fixed" />
-    <Gallery />
+    <Header :page="'nieuws'" />
+    <News />
   </div>
 </template>
 
 <script>
-import Gallery from '~/components/Gallery.vue'
 import Header from '~/components/Header.vue'
+import News from '~/components/News.vue'
 
 export default {
   components: {
     Header,
-    Gallery
-  },
-  computed: {
-    women() {
-      return this.$store.state.women
-    }
+    News
   }
 }
 </script>
@@ -33,15 +28,11 @@ export default {
   width: 100%;
   margin: 0 auto;
   min-height: 100vh;
+  background-color: black;
 }
 
 button:focus {
   outline: none;
   background: transparent;
-}
-
-.fixed {
-  position: fixed;
-  z-index: 4;
 }
 </style>
