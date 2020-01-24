@@ -76,7 +76,7 @@ export default {
   },
   data() {
     return {
-      photosToShow: [4, 5, 6],
+      photosToShow: [3, 4, 5],
       possibleLeft: true,
       possibleRight: true,
       mobile: false
@@ -105,7 +105,7 @@ export default {
       if (window) {
         if (window.innerWidth < 700) {
           this.mobile = true
-          photos = [5]
+          photos = [3]
         } else if (window.innerWidth < 1350) {
           this.mobile = true
           photos = [3, 4]

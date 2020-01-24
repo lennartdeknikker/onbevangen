@@ -111,7 +111,19 @@ export default {
     return {
       showMobileMenu: false,
       enableMultiLang: false,
-      online: true
+      online: true,
+      mobile: false
+    }
+  },
+  methods: {
+    checkMobile() {
+      if (window) {
+        if (window.innerWidth < 700) {
+          this.mobile = true
+        } else if (window.innerWidth < 1350) {
+          this.mobile = true
+        }
+      }
     }
   }
 }
