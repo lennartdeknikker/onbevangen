@@ -3,12 +3,15 @@
     <div
       :style="style"
       v-if="photosToShow.includes(photoIndex)"
-      @mouseenter="show = !show"
-      @mouseleave="show = !show"
+      @click="toggleVisible = !toggleVisible"
       class="gallery-item"
     >
       <transition name="trans-content">
-        <div v-if="show" class="content">
+        <div
+          :class="{ actOnHover: !mobile }"
+          v-if="!mobile | toggleVisible"
+          class="content"
+        >
           <h2 class="name">
             <span class="first-name">
               {{ woman.first_name }}
@@ -58,18 +61,22 @@ export default {
     photosToShow: {
       type: Array,
       required: true
+    },
+    mobile: {
+      type: Boolean,
+      required: true
     }
   },
   data() {
     return {
-      show: false,
       route: `${
         this.woman.position
       }-${this.woman.first_name
         .toLowerCase()
         .replace(/\s+/g, '-')}-${this.woman.last_name
         .toLowerCase()
-        .replace(/\s+/g, '-')}`
+        .replace(/\s+/g, '-')}`,
+      toggleVisible: false
     }
   },
   computed: {
@@ -107,11 +114,19 @@ export default {
   padding: 8rem 2.5rem 5rem 2.5rem;
 }
 
+.actOnHover:hover {
+  opacity: 1;
+}
+
+.actOnHover {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
 .trans-content-enter-active,
 .trans-content-leave-active {
   transition: opacity 0.4s;
 }
-
 .trans-content-enter,
 .trans-content-leave-to {
   opacity: 0;

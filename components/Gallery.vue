@@ -34,6 +34,7 @@
       :data-person="woman.first_name"
       :photoIndex="index"
       :photosToShow="photosToShow"
+      :mobile="mobile"
     >
     </GalleryItem>
     <button
