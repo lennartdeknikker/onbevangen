@@ -99,7 +99,7 @@ export default {
 }
 
 .gallery-item {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
 }
@@ -184,7 +184,6 @@ export default {
 
 @media (min-width: 700px) {
   .gallery-item {
-    height: 100%;
     width: 50%;
   }
 
@@ -195,7 +194,6 @@ export default {
 
 @media (min-width: 1350px) {
   .gallery-item {
-    height: 100%;
     width: 33.33%;
   }
 
