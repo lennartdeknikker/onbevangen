@@ -78,6 +78,11 @@ export default {
         .replace(/\s+/g, '-')}`,
       toggleVisible: false
     }
+  },
+  watch: {
+    photosToShow() {
+      this.toggleVisible = false
+    }
   }
 }
 </script>
