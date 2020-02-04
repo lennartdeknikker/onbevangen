@@ -139,6 +139,7 @@ export default {
 
 .toggle-menu {
   display: none;
+  cursor: pointer;
 }
 
 .nav-container {

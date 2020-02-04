@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header />
+    <Header :page="'detail'" />
     <Detail :woman="detail" />
   </div>
 </template>

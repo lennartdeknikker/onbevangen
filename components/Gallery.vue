@@ -178,6 +178,7 @@ export default {
 .slide-button:active {
   outline: none;
   border: none;
+  background-color: transparent;
 }
 
 .slide-button-left {
