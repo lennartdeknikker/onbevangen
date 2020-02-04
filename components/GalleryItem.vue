@@ -87,7 +87,6 @@ export default {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .slide-enter-active {
@@ -99,14 +98,14 @@ export default {
 }
 
 .gallery-item {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
 /* content card styling */
 .content {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-color: black;
   color: white;
@@ -184,6 +183,7 @@ export default {
 
 @media (min-width: 700px) {
   .gallery-item {
+    height: 100%;
     width: 50%;
   }
 
@@ -194,6 +194,7 @@ export default {
 
 @media (min-width: 1350px) {
   .gallery-item {
+    height: 100%;
     width: 33.33%;
   }
 
