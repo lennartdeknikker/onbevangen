@@ -28,39 +28,7 @@
     </ul>
     <div :class="{ unfolded: showMobileMenu }" class="mobile-menu-container">
       <button @click="showMobileMenu = !showMobileMenu" class="toggle-menu">
-        <svg
-          v-if="!showMobileMenu"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 300 300"
-          class="i-menu"
-        >
-          <title>open menu</title>
-          <line class="icon-line" x1="37" y1="85" x2="282" y2="85" />
-          <line class="icon-line" x1="37" y1="150" x2="282" y2="150" />
-          <line class="icon-line" x1="37" y1="215" x2="282" y2="215" />
-        </svg>
-        <svg
-          v-if="showMobileMenu"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 300 300"
-          class="i-cross"
-        >
-          <title>close menu</title>
-          <line
-            class="icon-line"
-            x1="63.38"
-            y1="63.38"
-            x2="236.62"
-            y2="236.62"
-          />
-          <line
-            class="icon-line"
-            x1="63.38"
-            y1="236.62"
-            x2="236.62"
-            y2="63.38"
-          />
-        </svg>
+        <span id="x" :class="{ clicked: showMobileMenu }"></span>
       </button>
       <ul v-if="showMobileMenu" class="mobile-menu">
         <li v-if="online" class="nav-item">
@@ -239,5 +207,96 @@ export default {
   .language-indicators {
     font-size: 1.7rem;
   }
+}
+
+/* menu icon transitions */
+span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 0px;
+  margin: 15% auto;
+  -webkit-transition: all 0.3s ease, -webkit-transform 0.2s ease;
+  transition: all 0.3s ease, transform 0.2s ease;
+  background: -webkit-linear-gradient(
+      top,
+      transparent 0%,
+      transparent 10%,
+      white 10%,
+      white 16%,
+      transparent 16%,
+      transparent 47%,
+      white 47%,
+      white 53%,
+      transparent 53%,
+      transparent 84%,
+      white 84%,
+      white 90%,
+      transparent 90%
+    ),
+    -webkit-linear-gradient(transparent, transparent);
+  background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 10%,
+      white 10%,
+      white 16%,
+      transparent 16%,
+      transparent 47%,
+      white 47%,
+      white 53%,
+      transparent 53%,
+      transparent 84%,
+      white 84%,
+      white 90%,
+      transparent 90%
+    ),
+    linear-gradient(transparent, transparent);
+}
+span:active,
+span:hover {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+span.clicked {
+  background: -webkit-linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 48%,
+      white 48%,
+      white 52%,
+      transparent 52%,
+      transparent 100%
+    ),
+    -webkit-linear-gradient(45deg, transparent 0%, transparent 48%, white 49%, white
+          51%, transparent 51%, transparent 100%);
+  background: linear-gradient(
+      -45deg,
+      transparent 0%,
+      transparent 48%,
+      white 49%,
+      white 51%,
+      transparent 51%,
+      transparent 100%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 0%,
+      transparent 48%,
+      white 49%,
+      white 51%,
+      transparent 51%,
+      transparent 100%
+    );
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+span.clicked:active,
+span.clicked:hover {
+  -webkit-transform: scale(0.9) rotate(180deg);
+  -ms-transform: scale(0.9) rotate(180deg);
 }
 </style>
