@@ -178,6 +178,8 @@ export default {
 
   .mobile-menu-container {
     display: flex;
+    transition: left 1s ease;
+    left: -100%;
   }
 
   .unfolded {
