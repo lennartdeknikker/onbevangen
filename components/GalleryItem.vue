@@ -83,6 +83,11 @@ export default {
     style() {
       return `background: center / cover no-repeat url(${this.woman.image});`
     }
+  },
+  watch: {
+    photosToShow() {
+      this.toggleVisible = false
+    }
   }
 }
 </script>
