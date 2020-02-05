@@ -1,11 +1,11 @@
 <template>
   <transition name="slide">
     <div
+      :style="style"
       v-if="photosToShow.includes(photoIndex)"
       @click="toggleVisible = !toggleVisible"
       class="gallery-item"
     >
-      <img :src="woman.image" class="image" />
       <transition name="trans-content">
         <div
           :class="{ actOnHover: !mobile }"
@@ -79,21 +79,15 @@ export default {
       toggleVisible: false
     }
   },
-  watch: {
-    photosToShow() {
-      this.toggleVisible = false
+  computed: {
+    style() {
+      return `background: center / cover no-repeat url(${this.woman.image});`
     }
   }
 }
 </script>
 
 <style>
-.image {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
 .slide-enter-active {
   transition: opacity 1.5s;
 }
@@ -105,12 +99,11 @@ export default {
 .gallery-item {
   height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 /* content card styling */
 .content {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: black;
   color: white;
@@ -119,8 +112,6 @@ export default {
   align-items: flex-end;
   justify-content: space-between;
   padding: 8rem 2.5rem 5rem 2.5rem;
-  position: absolute;
-  top: 0;
 }
 
 .actOnHover:hover {
@@ -191,19 +182,11 @@ export default {
     height: 100%;
     width: 50%;
   }
-
-  .content {
-    width: 50%;
-  }
 }
 
 @media (min-width: 1350px) {
   .gallery-item {
     height: 100%;
-    width: 33.33%;
-  }
-
-  .content {
     width: 33.33%;
   }
 }
