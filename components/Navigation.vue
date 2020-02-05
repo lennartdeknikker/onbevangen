@@ -28,7 +28,11 @@
     </ul>
     <div :class="{ unfolded: showMobileMenu }" class="mobile-menu-container">
       <button @click="showMobileMenu = !showMobileMenu" class="toggle-menu">
-        <span id="x" :class="{ clicked: showMobileMenu }"></span>
+        <span
+          id="x"
+          :class="{ clicked: showMobileMenu }"
+          class="close-icon"
+        ></span>
       </button>
       <ul v-if="showMobileMenu" class="mobile-menu">
         <li v-if="online" class="nav-item">
@@ -210,7 +214,7 @@ export default {
 }
 
 /* menu icon transitions */
-span {
+.close-icon {
   display: block;
   width: 30px;
   height: 30px;
@@ -254,13 +258,13 @@ span {
     ),
     linear-gradient(transparent, transparent);
 }
-span:active,
-span:hover {
+.close-icon:active,
+.close-icon:hover {
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
 }
-span.clicked {
+.close-icon.clicked {
   background: -webkit-linear-gradient(
       135deg,
       transparent 0%,
@@ -294,8 +298,8 @@ span.clicked {
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-span.clicked:active,
-span.clicked:hover {
+.close-icon.clicked:active,
+.close-icon.clicked:hover {
   -webkit-transform: scale(0.9) rotate(180deg);
   -ms-transform: scale(0.9) rotate(180deg);
 }
