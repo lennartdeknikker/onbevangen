@@ -1,7 +1,7 @@
 <template>
   <ul class="social-buttons">
     <li v-for="link in social" :key="link.name" class="social-button">
-      <a :href="link.link">
+      <a :href="link.link" target="_blank">
         <i :class="link.FAIconClass"></i>
       </a>
     </li>
