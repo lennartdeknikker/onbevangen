@@ -64,6 +64,7 @@
         <polyline class="a" points="4 4 105 126.5 4.31 248.62" />
       </svg>
     </button>
+    <ul class="preloader"></ul>
   </div>
 </template>
 
@@ -98,8 +99,17 @@ export default {
   },
   mounted() {
     this.photosToShow = this.checkMobile()
+    this.preloadPhotos()
   },
   methods: {
+    preloadPhotos() {
+      const preloaderElement = document.querySelector('.preloader')
+      for (let i = 0; i < this.women.length; i += 1) {
+        const newItem = document.createElement('li')
+        newItem.style = `background: center / cover no-repeat url(${this.women[i].image});`
+        preloaderElement.appendChild(newItem)
+      }
+    },
     checkMobile() {
       let photos = []
       if (window) {
@@ -151,6 +161,14 @@ export default {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+}
+
+.preloader {
+  position: absolute;
+  height: 0;
+  width: 0;
+  left: -1000px;
+  top: -1000px;
 }
 
 .slide-button {
