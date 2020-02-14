@@ -23,7 +23,7 @@
             }
           </style>
         </defs>
-        <title>arrow</title>
+        <title>meer foto's</title>
         <polyline class="a" points="106.18 4 5.18 126.5 105.87 248.62" />
       </svg>
     </button>
@@ -60,7 +60,7 @@
             }
           </style>
         </defs>
-        <title>arrow-right</title>
+        <title>meer foto's</title>
         <polyline class="a" points="4 4 105 126.5 4.31 248.62" />
       </svg>
     </button>

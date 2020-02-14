@@ -33,6 +33,7 @@
                   }
                 </style>
               </defs>
+              <title>meer informatie</title>
               <line class="a" x1="126.5" y1="4" x2="126.5" y2="249" />
               <line class="a" x1="4" y1="126.5" x2="249" y2="126.5" />
             </svg>

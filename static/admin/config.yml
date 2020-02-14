@@ -9,7 +9,9 @@ locale: 'nl'
 
 collections:
   - name: 'general'
-    label: 'General configuration'
+    label: 'Algemene instellingen'
+    description: >
+      Pas hier de algemene instellingen van de website aan, zoals bijvoorbeeld de social media links.
     format: 'json'
     folder: 'assets/content/general'
     create: false
@@ -17,8 +19,13 @@ collections:
     slug: '{{slug}}'
     editor:
       preview: false
-    identifier_field: social
+    identifier_field: componentname
     fields:
+      - {
+          label: 'Naam van de component',
+          name: 'componentname',
+          widget: 'string',
+        }
       - name: 'social'
         label: 'Social Media Links'
         widget: list
@@ -38,7 +45,7 @@ collections:
       Pas hier de tekst van de pagina 'Nieuws' aan.
     format: 'json'
     folder: 'assets/content/news'
-    create: false    
+    create: false
     delete: false
     slug: '{{slug}}'
     editor:
