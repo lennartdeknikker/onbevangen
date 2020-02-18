@@ -160,11 +160,10 @@ collections:
     format: 'json'
     folder: 'assets/content/newsitems'
     create: true
-    # slug: '{{position}}-{{first_name}}-{{last_name}}'
-    # summary: '{{first_name}} {{last_name}} ({{position}})'
+    slug: '{{title}}-{{date}}'
     editor:
       preview: false
-    # identifier_field: last_name
+    identifier_field: date
     fields:
       - { label: 'Titel', name: 'title', widget: 'string' }
       - { label: 'Publicatie-datum', name: 'date', widget: 'datetime' }

@@ -13,6 +13,11 @@ export default {
   components: {
     Header,
     News
+  },
+  computed: {
+    newsItems() {
+      return this.$store.state.newsItems
+    }
   }
 }
 </script>

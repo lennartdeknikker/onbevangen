@@ -20,24 +20,6 @@ export default {
       return {
         detail: await require(`~/assets/content/women/${params.detail}.json`)
       }
-  },
-  head() {
-    return {
-      script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
-        { src: 'https://kit.fontawesome.com/80d7baaf7e.js' }
-      ],
-      link: [
-        {
-          rel: 'stylesheet',
-          href:
-            'https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap'
-        }
-      ],
-      meta: [
-        { name: 'viewport', content: 'width=device-width,initial-scale=1.0' }
-      ]
-    }
   }
 }
 </script>

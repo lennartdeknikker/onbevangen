@@ -60,19 +60,34 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxtjs/markdownit'],
   /*
    ** Build configuration
    */
+  markdownit: {
+    injected: true
+  },
   generate: {
     routes() {
       const fs = require('fs')
-      return fs.readdirSync('./assets/content/women').map((file) => {
-        return {
-          route: `/${file.slice(0, -5)}`,
-          payload: require(`./assets/content/women/${file}`)
-        }
-      })
+      const womenRoutes = fs
+        .readdirSync('./assets/content/women')
+        .map((file) => {
+          return {
+            route: `/detail/${file.slice(0, -5)}`,
+            payload: require(`./assets/content/women/${file}`)
+          }
+        })
+      const newsItemRoutes = fs
+        .readdirSync('./assets/content/newsitems')
+        .map((file) => {
+          return {
+            route: `/nieuwsberichten/${file.slice(0, -5)}`,
+            payload: require(`./assets/content/newsitems/${file}`)
+          }
+        })
+      const allRoutes = womenRoutes.concat(newsItemRoutes)
+      return allRoutes
     }
   },
   build: {

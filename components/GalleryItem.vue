@@ -70,7 +70,7 @@ export default {
   },
   data() {
     return {
-      route: `${
+      route: `detail/${
         this.woman.position
       }-${this.woman.first_name
         .toLowerCase()

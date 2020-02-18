@@ -10,5 +10,8 @@ export default {
   },
   setNews(state, news) {
     state.news = news
+  },
+  setNewsItems(state, newsItems) {
+    state.newsItems = newsItems
   }
 }
