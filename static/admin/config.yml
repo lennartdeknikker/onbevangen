@@ -6,7 +6,8 @@ media_folder: static/images/upload
 public_folder: /images/upload
 
 locale: 'nl'
-logo_url: https://www.onbevangen-hetproject.nl/images/logo.png
+logo_url: https://www.onbevangen-hetproject.nl/images/logo-cms.png
+display_url: https://www.onbevangen-hetproject.nl/
 
 collections:
   - name: 'general'
@@ -150,3 +151,22 @@ collections:
               - { label: 'NL', name: 'nl', widget: 'string', required: true }
               - { label: 'EN', name: 'en', widget: 'string', required: false }
       - { label: 'Uitgelichte foto', name: 'image', widget: 'image' }
+
+  - name: 'newsitems'
+    label: 'Nieuwsberichten'
+    label_singular: 'Nieuwsbericht'
+    description: >
+      Voeg hieronder nieuwsberichten aan de website toe.
+    format: 'json'
+    folder: 'assets/content/newsitems'
+    create: true
+    # slug: '{{position}}-{{first_name}}-{{last_name}}'
+    # summary: '{{first_name}} {{last_name}} ({{position}})'
+    editor:
+      preview: false
+    # identifier_field: last_name
+    fields:
+      - { label: 'Titel', name: 'title', widget: 'string' }
+      - { label: 'Publicatie-datum', name: 'date', widget: 'datetime' }
+      - { label: 'Beschrijving', name: 'description', widget: 'string' }
+      - { label: 'Tekst', name: 'body', widget: 'markdown' }
