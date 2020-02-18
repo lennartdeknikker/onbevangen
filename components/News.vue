@@ -12,14 +12,6 @@
         >
           {{ item.text }}
         </p>
-        <h3 v-if="newsItems" class="news-links-title">Het laatste nieuws</h3>
-        <ul v-if="newsItems" class="news-links-list">
-          <li v-for="item of newsItems" :key="item.date">
-            <a :href="'/nieuwsberichten/' + item.title">
-              {{ item.title }}
-            </a>
-          </li>
-        </ul>
         <!-- Begin Mailchimp Signup Form -->
         <div id="mc_embed_signup" class="mailchimp-form-container">
           <form
@@ -105,6 +97,23 @@
         <!--End mc_embed_signup-->
       </article>
     </section>
+    <section class="thanks-text">
+      <h2 class="thanks-title">Het laatste nieuws:</h2>
+      <ul v-if="newsItems" class="thanks-list">
+        <a
+          v-for="item of newsItems"
+          :key="item.date"
+          :href="'/nieuwsberichten/' + item.title"
+        >
+          <li>
+            {{ item.title }}
+            <p>
+              {{ normalizeDate(item.date) }}
+            </p>
+          </li>
+        </a>
+      </ul>
+    </section>
   </div>
 </template>
 
@@ -120,6 +129,9 @@ export default {
     news() {
       return this.$store.state.news[0]
     },
+    information() {
+      return this.$store.state.information[0]
+    },
     social() {
       return this.$store.state.social[0].social
     },
@@ -134,6 +146,18 @@ export default {
         return link.name === 'Instagram'
       }
       return this.social.find(isFbLink).link
+    }
+  },
+  methods: {
+    normalizeDate(value) {
+      const date = new Date(value)
+      function addPad(value) {
+        return String(value).padStart(2, '0')
+      }
+      return `${addPad(date.getDate())}/${addPad(date.getMonth() + 1)}/${addPad(
+        date.getFullYear()
+      )} 
+  ${addPad(date.getHours())}:${addPad(date.getMinutes())}`
     }
   }
 }
@@ -175,12 +199,6 @@ p {
   font-weight: normal;
 }
 
-.thanks-list {
-  list-style-type: none;
-  padding: 0;
-  max-width: 23em;
-}
-
 .task {
   color: var(--grey);
 }
@@ -210,12 +228,12 @@ p {
 
 .link-in-text {
   font-size: 1em;
-  font-weight: bold;
   transition: font-size 0.5s ease;
+  color: inherit;
 }
 
 .link-in-text:hover {
-  font-size: 1.02em;
+  font-size: 1.1em;
 }
 
 /* mailchimp form styling */
@@ -252,23 +270,37 @@ p {
   margin-top: 1rem;
 }
 
-.news-links-list {
+.thanks-list {
   font-size: 1em;
   margin-bottom: 1em;
   padding: 0;
+  max-width: 23em;
 }
 
-.news-links-list li {
-  list-style-type: none;
-}
-
-.news-links-list li a {
+.thanks-list a {
   font-size: 1em;
+}
+
+.thanks-list li {
+  list-style-type: none;
+  border: 1px solid white;
+  padding: 0.5em 1em;
+  transition: background-color, color 0.3s ease;
+}
+
+.thanks-list li:hover {
+  background-color: white;
+  color: black;
   cursor: pointer;
 }
 
-.news-links-list li a:hover {
-  font-size: 1.1em;
+body {
+  align-items: center;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  height: 100vh;
+  justify-content: center;
 }
 
 @media (max-width: 800px) {
