@@ -3,5 +3,5 @@ export default () => ({
   social: [],
   information: [],
   news: [],
-  newsItems: []
+  newsitems: []
 })

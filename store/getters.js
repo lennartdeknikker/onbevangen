@@ -11,7 +11,7 @@ export default {
   getNews(state) {
     return state.news
   },
-  getNewsItems(state) {
-    return state.newsItems
+  getnewsitems(state) {
+    return state.newsitems
   }
 }

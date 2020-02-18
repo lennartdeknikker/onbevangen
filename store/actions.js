@@ -49,13 +49,13 @@ export default {
     })
 
     // news items
-    const newsItemFiles = await require.context(
+    const newsitemFiles = await require.context(
       '~/assets/content/newsitems/',
       false,
       /\.json$/
     )
-    const newsItems = newsItemFiles.keys().map((key) => {
-      const res = newsItemFiles(key)
+    const newsitems = newsitemFiles.keys().map((key) => {
+      const res = newsitemFiles(key)
       res.slug = key.slice(2, -5)
       return res
     })
@@ -64,6 +64,6 @@ export default {
     await commit('setWomen', women)
     await commit('setInformation', information)
     await commit('setNews', news)
-    await commit('setNewsItems', newsItems)
+    await commit('setnewsitems', newsitems)
   }
 }

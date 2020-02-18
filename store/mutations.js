@@ -11,7 +11,13 @@ export default {
   setNews(state, news) {
     state.news = news
   },
-  setNewsItems(state, newsItems) {
-    state.newsItems = newsItems
+  setnewsitems(state, newsitems) {
+    function onDate(a, b) {
+      const aDate = new Date(a)
+      const bDate = new Date(b)
+      if (aDate < bDate) return false
+      else return true
+    }
+    state.newsitems = newsitems.sort(onDate)
   }
 }

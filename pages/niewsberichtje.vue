@@ -26,12 +26,10 @@ export default {
   components: {
     Header
   },
-  async asyncData({ params, payload }) {
-    if (payload) return { newsitem: payload }
-    else
-      return {
-        newsitem: await require(`~/assets/content/newsitems/${params.newsitem}.json`)
-      }
+  computed: {
+    newsitem() {
+      return this.$store.state.newsitems[2]
+    }
   },
   methods: {
     normalizeDate(value) {
@@ -45,6 +43,14 @@ export default {
   ${addPad(date.getHours())}:${addPad(date.getMinutes())}`
     }
   }
+
+  // async asyncData({ params, payload }) {
+  //   if (payload) return { newsitem: payload }
+  //   else
+  //     return {
+  //       newsitem: await require(`~/assets/content/newsitems/${params.newsitem}.json`)
+  //     }
+  // }
 }
 </script>
 

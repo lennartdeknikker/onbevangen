@@ -78,7 +78,7 @@ export default {
             payload: require(`./assets/content/women/${file}`)
           }
         })
-      const newsItemRoutes = fs
+      const newsitemRoutes = fs
         .readdirSync('./assets/content/newsitems')
         .map((file) => {
           return {
@@ -86,7 +86,7 @@ export default {
             payload: require(`./assets/content/newsitems/${file}`)
           }
         })
-      const allRoutes = womenRoutes.concat(newsItemRoutes)
+      const allRoutes = newsitemRoutes.concat(womenRoutes)
       return allRoutes
     }
   },

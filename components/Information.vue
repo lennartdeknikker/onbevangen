@@ -29,21 +29,6 @@ export default {
   computed: {
     information() {
       return this.$store.state.information[0]
-    },
-    social() {
-      return this.$store.state.social[0].social
-    },
-    facebookLink() {
-      function isFbLink(link) {
-        return link.name === 'Facebook'
-      }
-      return this.social.find(isFbLink).link
-    },
-    instagramLink() {
-      function isFbLink(link) {
-        return link.name === 'Instagram'
-      }
-      return this.social.find(isFbLink).link
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Header :page="'nieuws'" />
-    <News :newsItems="newsItems" />
+    <News :newsitems="newsitems" />
   </div>
 </template>
 
@@ -15,8 +15,8 @@ export default {
     News
   },
   computed: {
-    newsItems() {
-      return this.$store.state.newsItems
+    newsitems() {
+      return this.$store.state.newsitems
     }
   }
 }

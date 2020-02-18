@@ -99,18 +99,21 @@
     </section>
     <section class="thanks-text">
       <h2 class="thanks-title">Het laatste nieuws:</h2>
-      <ul v-if="newsItems" class="thanks-list">
+      <ul v-if="newsitems" class="thanks-list">
         <a
-          v-for="item of newsItems"
+          v-for="item of newsitems"
           :key="item.date"
           :href="'/nieuwsberichten/' + item.slug"
         >
-          <li>
-            <h3>
+          <li v-if="item">
+            <h3 v-if="item.title">
               {{ item.title }}
             </h3>
-            <p>
+            <p v-if="item.date">
               {{ normalizeDate(item.date) }}
+            </p>
+            <p v-if="item.description">
+              {{ item.description }}
             </p>
           </li>
         </a>
@@ -122,7 +125,7 @@
 <script>
 export default {
   props: {
-    newsItems: {
+    newsitems: {
       type: Array,
       required: true
     }
@@ -130,24 +133,6 @@ export default {
   computed: {
     news() {
       return this.$store.state.news[0]
-    },
-    information() {
-      return this.$store.state.information[0]
-    },
-    social() {
-      return this.$store.state.social[0].social
-    },
-    facebookLink() {
-      function isFbLink(link) {
-        return link.name === 'Facebook'
-      }
-      return this.social.find(isFbLink).link
-    },
-    instagramLink() {
-      function isFbLink(link) {
-        return link.name === 'Instagram'
-      }
-      return this.social.find(isFbLink).link
     }
   },
   methods: {
