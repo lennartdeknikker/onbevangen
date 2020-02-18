@@ -103,7 +103,7 @@
         <a
           v-for="item of newsItems"
           :key="item.date"
-          :href="'/nieuwsberichten/' + item.title"
+          :href="'/nieuwsberichten/' + item.title.replace(' ', '-')"
         >
           <li>
             <h3>
