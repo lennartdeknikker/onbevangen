@@ -109,7 +109,7 @@
             <h3 v-if="item.title">
               {{ item.title }}
             </h3>
-            <p v-if="item.date">
+            <p v-if="item.date" class="item-date">
               {{ normalizeDate(item.date) }}
             </p>
             <p v-if="item.description">
@@ -292,6 +292,11 @@ body {
   font-size: 2em;
   height: 100vh;
   justify-content: center;
+}
+
+.item-date {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 800px) {
