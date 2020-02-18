@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Header :page="'nieuws'" />
-    <News />
+    <News :newsItems="newsItems" />
   </div>
 </template>
 

@@ -12,6 +12,14 @@
         >
           {{ item.text }}
         </p>
+        <h3 v-if="newsItems" class="news-links-title">Het laatste nieuws</h3>
+        <ul v-if="newsItems" class="news-links-list">
+          <li v-for="item of newsItems" :key="item.date">
+            <a :href="'/nieuwsberichten/' + item.title">
+              {{ item.title }}
+            </a>
+          </li>
+        </ul>
         <!-- Begin Mailchimp Signup Form -->
         <div id="mc_embed_signup" class="mailchimp-form-container">
           <form
@@ -102,6 +110,12 @@
 
 <script>
 export default {
+  props: {
+    newsItems: {
+      type: Array,
+      required: true
+    }
+  },
   computed: {
     news() {
       return this.$store.state.news[0]
@@ -236,6 +250,25 @@ p {
 .email-input {
   width: 100%;
   margin-top: 1rem;
+}
+
+.news-links-list {
+  font-size: 1em;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.news-links-list li {
+  list-style-type: none;
+}
+
+.news-links-list li a {
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.news-links-list li a:hover {
+  font-size: 1.1em;
 }
 
 @media (max-width: 800px) {
