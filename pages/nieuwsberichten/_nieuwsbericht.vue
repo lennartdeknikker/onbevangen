@@ -85,6 +85,16 @@ export default {
   width: 100%;
 }
 
+.newsitem p {
+  margin-bottom: 1rem;
+}
+
+.newsitem h1,
+.newsitem h2,
+.newsitem h3 {
+  font-size: 1rem;
+}
+
 .newsitem-title {
   color: white;
   font-size: 1.5rem;
