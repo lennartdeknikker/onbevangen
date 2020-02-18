@@ -161,6 +161,7 @@ collections:
     folder: 'assets/content/newsitems'
     create: true
     slug: '{{title}}-{{date}}'
+    summary: '{{title}}-{{date}}'
     editor:
       preview: false
     identifier_field: date

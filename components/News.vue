@@ -106,7 +106,9 @@
           :href="'/nieuwsberichten/' + item.title"
         >
           <li>
-            {{ item.title }}
+            <h3>
+              {{ item.title }}
+            </h3>
             <p>
               {{ normalizeDate(item.date) }}
             </p>
@@ -219,7 +221,7 @@ p {
 }
 
 .exposition-text {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .launch-text {
@@ -278,6 +280,10 @@ p {
 }
 
 .thanks-list a {
+  font-size: 1em;
+}
+
+.thanks-list h3 {
   font-size: 1em;
 }
 
