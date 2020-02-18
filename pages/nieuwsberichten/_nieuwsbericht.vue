@@ -12,9 +12,8 @@
         <p
           v-if="newsitem.body"
           v-html="$md.render(newsitem.body)"
-          class="newsitem-description"
+          class="newsitem-body"
         ></p>
-        <!-- <div class="newsitem-body"  /> -->
       </article>
     </section>
   </div>
@@ -110,7 +109,8 @@ export default {
   margin: 0.5rem 0 1rem 0;
   text-align: right;
 }
-.newsitem-description {
+.newsitem-body {
   color: white;
+  text-align: justify;
 }
 </style>

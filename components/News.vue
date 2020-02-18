@@ -98,7 +98,7 @@
       </article>
     </section>
     <section class="thanks-text">
-      <h2 class="thanks-title">Het laatste nieuws:</h2>
+      <h2 class="thanks-title">Het laatste nieuws</h2>
       <ul v-if="newsitems" class="thanks-list">
         <a
           v-for="item of newsitems"
@@ -210,7 +210,7 @@ p {
 }
 
 .launch-text {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .link-in-text {
