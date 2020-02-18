@@ -85,7 +85,8 @@ export default {
   width: 100%;
 }
 
-.newsitem p {
+.newsitem p,
+.newsitem ul {
   margin-bottom: 1rem;
 }
 
