@@ -160,7 +160,7 @@ collections:
     format: 'json'
     folder: 'assets/content/newsitems'
     create: true
-    slug: '{{title}}-{{date}}'
+    slug: '{{slug}}'
     summary: '{{title}}'
     editor:
       preview: false
